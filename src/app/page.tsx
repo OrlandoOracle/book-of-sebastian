@@ -47,7 +47,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 items-center mt-8">
             <CTAButton
-              href="https://bookofsebastian.substack.com"
+              href="https://sebastiangerhardt.substack.com"
               variant="primary"
               external={true}
               utmCampaign="hero"
@@ -55,7 +55,7 @@ export default function Home() {
               Read the Opening Verse
             </CTAButton>
             <CTAButton
-              href="https://bookofsebastian.substack.com/subscribe"
+              href="https://sebastiangerhardt.substack.com/subscribe"
               variant="secondary"
               external={true}
               utmCampaign="hero_subscribe"
@@ -122,7 +122,7 @@ export default function Home() {
 
         <div className="text-center mt-8">
           <CTAButton
-            href="https://bookofsebastian.substack.com"
+            href="https://sebastiangerhardt.substack.com"
             variant="primary"
             external={true}
             utmCampaign="latest_verse"

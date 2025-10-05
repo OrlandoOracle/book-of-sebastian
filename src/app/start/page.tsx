@@ -3,10 +3,10 @@ import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
   title: 'Start Here | The Book of Sebastian',
-  description: 'Begin your journey. Read from the first verse and witness transformation in real-time. A modern testament of survival, accountability, and empire building.',
+  description: 'Begin your journey. Your guide to navigating the testament.',
   openGraph: {
     title: 'Start Here | The Book of Sebastian',
-    description: 'Begin your journey. Read from the first verse and witness transformation in real-time.',
+    description: 'Begin your journey. Your guide to navigating the testament.',
     url: 'https://bookofsebastian.com/start',
     siteName: 'The Book of Sebastian',
     type: 'website',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Start Here | The Book of Sebastian',
-    description: 'Begin your journey. Read from the first verse.',
+    description: 'Begin your journey. Your guide to navigating the testament.',
   },
   alternates: {
     canonical: 'https://bookofsebastian.com/start',
@@ -84,7 +84,7 @@ export default function StartHere() {
 
           <div className="text-center">
             <CTAButton
-              href="https://bookofsebastian.substack.com"
+              href="https://sebastiangerhardt.substack.com"
               variant="primary"
               external={true}
               utmCampaign="start_page"
@@ -206,7 +206,7 @@ export default function StartHere() {
           Subscribe to receive each verse every Sunday. Join the journey.
         </p>
         <CTAButton
-          href="https://bookofsebastian.substack.com/subscribe"
+          href="https://sebastiangerhardt.substack.com/subscribe"
           variant="primary"
           external={true}
           utmCampaign="start_page_subscribe"

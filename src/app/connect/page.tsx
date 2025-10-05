@@ -2,10 +2,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Connect | The Book of Sebastian',
-  description: 'Follow the journey across platforms. Connect with Sebastian for speaking, collaboration, or to share your own story of transformation.',
+  description: 'Join the conversation. Connect across platforms and communities.',
   openGraph: {
     title: 'Connect | The Book of Sebastian',
-    description: 'Follow the journey across platforms. Connect with Sebastian.',
+    description: 'Join the conversation. Connect across platforms and communities.',
     url: 'https://bookofsebastian.com/connect',
     siteName: 'The Book of Sebastian',
     type: 'website',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Connect | The Book of Sebastian',
-    description: 'Follow the journey. Connect with Sebastian.',
+    description: 'Join the conversation. Connect across platforms and communities.',
   },
   alternates: {
     canonical: 'https://bookofsebastian.com/connect',
@@ -38,22 +38,25 @@ export default function Connect() {
         <div className="grid md:grid-cols-2 gap-6">
           {/* Substack */}
           <a
-            href="https://bookofsebastian.substack.com?utm_source=website&utm_medium=connect&utm_campaign=social"
-            className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow group"
+            href="https://sebastiangerhardt.substack.com?utm_source=website&utm_medium=connect&utm_campaign=social"
+            className="bg-white border-2 border-silver rounded-lg p-8 hover:border-royal-blue transition-all group"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                <svg className="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-royal-blue transition-colors">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
                 </svg>
               </div>
               <div>
-                <h3 className="font-serif text-2xl font-bold text-gray-900">Substack</h3>
-                <p className="text-gray-600">Primary Platform</p>
+                <h3 className="font-title text-2xl font-semibold text-black">Substack</h3>
+                <p className="text-dark-gray">Primary Platform</p>
               </div>
             </div>
-            <p className="text-gray-700">
-              Read the weekly verses, subscribe for updates, and join the discussion.
+            <p className="text-black mb-3">
+              Receive chapters and insights in your inbox
+            </p>
+            <p className="text-royal-blue font-medium group-hover:underline">
+              Subscribe on Substack →
             </p>
           </a>
 

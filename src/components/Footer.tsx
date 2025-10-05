@@ -39,7 +39,7 @@ export default function Footer() {
 
         <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm">
           <a
-            href="https://bookofsebastian.substack.com?utm_source=website&utm_medium=footer&utm_campaign=landing"
+            href="https://sebastiangerhardt.substack.com?utm_source=website&utm_medium=footer&utm_campaign=landing"
             className="font-serif text-charcoal/70 hover:text-gold transition-colors"
           >
             Substack

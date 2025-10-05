@@ -3,10 +3,10 @@ import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
   title: 'Subscribe | The Book of Sebastian',
-  description: 'Join the journey. Receive weekly verses delivered every Sunday. Real accountability, transformation, and empire building documented in real-time.',
+  description: 'Join the community. Receive chapters and insights directly to your inbox.',
   openGraph: {
     title: 'Subscribe | The Book of Sebastian',
-    description: 'Join the journey. Receive weekly verses delivered every Sunday.',
+    description: 'Join the community. Receive chapters and insights directly to your inbox.',
     url: 'https://bookofsebastian.com/subscribe',
     siteName: 'The Book of Sebastian',
     type: 'website',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Subscribe | The Book of Sebastian',
-    description: 'Join the journey. Weekly verses delivered to your inbox.',
+    description: 'Join the community. Receive chapters and insights directly to your inbox.',
   },
   alternates: {
     canonical: 'https://bookofsebastian.com/subscribe',
@@ -49,12 +49,11 @@ export default function Subscribe() {
           {/* Substack Embed */}
           <div className="max-w-xl mx-auto mb-8">
             <iframe
-              src="https://bookofsebastian.substack.com/embed"
+              src="https://sebastiangerhardt.substack.com/embed"
               width="100%"
               height="320"
               style={{
-                border: '1px solid #C0C0C0',
-                borderRadius: '8px',
+                border: '1px solid #EEE',
                 background: 'white'
               }}
               frameBorder="0"
@@ -180,7 +179,7 @@ export default function Subscribe() {
             The next verse arrives this Sunday.
           </p>
           <CTAButton
-            href="https://bookofsebastian.substack.com/subscribe"
+            href="https://sebastiangerhardt.substack.com/subscribe"
             variant="primary"
             external={true}
             utmCampaign="subscribe_page_final"

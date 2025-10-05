@@ -3,18 +3,18 @@ import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
   title: 'About | The Book of Sebastian',
-  description: 'From brain cancer miracle at 22 to building empire from a guest room. The testament of radical accountability and transformation documented in real-time.',
+  description: 'The story behind the testament. Discover the journey and purpose.',
   openGraph: {
-    title: 'About Sebastian | Modern Testament',
-    description: 'From brain cancer miracle at 22 to building empire from a guest room.',
+    title: 'About | The Book of Sebastian',
+    description: 'The story behind the testament. Discover the journey and purpose.',
     url: 'https://bookofsebastian.com/about',
     siteName: 'The Book of Sebastian',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Sebastian | Modern Testament',
-    description: 'From brain cancer miracle at 22 to building empire from a guest room.',
+    title: 'About | The Book of Sebastian',
+    description: 'The story behind the testament. Discover the journey and purpose.',
   },
   alternates: {
     canonical: 'https://bookofsebastian.com/about',
@@ -167,7 +167,7 @@ export default function About() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <CTAButton
-            href="https://bookofsebastian.substack.com/subscribe"
+            href="https://sebastiangerhardt.substack.com/subscribe"
             variant="primary"
             external={true}
             utmCampaign="about_page"
