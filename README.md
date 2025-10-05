@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Book of Sebastian
 
-## Getting Started
+A Testament of Radical Accountability, Miraculous Survival, and Building Empire from a Guest Room
 
-First, run the development server:
+## About
+
+The Book of Sebastian is a weekly testimony chronicling the journey from brain cancer survivor to empire builder. Every Sunday, a new verse documents the real-time transformation guided by The Foundation's radical accountability principles.
+
+## Live Site
+
+- **Production**: [bookofsebastian.com](https://bookofsebastian.com)
+- **Substack**: [bookofsebastian.substack.com](https://bookofsebastian.substack.com)
+
+## Tech Stack
+
+- **Framework**: Next.js 15.5.4 (React)
+- **Styling**: Tailwind CSS v4 with custom theme
+- **Typography**: EB Garamond, Cormorant Garamond
+- **Deployment**: Vercel
+- **Development**: Turbopack
+
+## Color Scheme
+
+- **Black** (#000000) - Primary text and headings
+- **Silver** (#C0C0C0) - Borders and dividers
+- **Royal Blue** (#4169E1) - Interactive elements and accents
+- **White** (#FFFFFF) - Clean background
+
+## Local Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Development server runs on [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This site is automatically deployed to Vercel on push to main branch.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+bookofsebastian/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx         # Home page
+│   │   ├── layout.tsx       # Root layout
+│   │   └── globals.css      # Global styles
+│   └── components/
+│       ├── Header.tsx       # Navigation header
+│       ├── CTAButton.tsx    # Call-to-action button
+│       ├── OrnamentalDivider.tsx
+│       └── SectionHeader.tsx
+├── public/                  # Static assets
+├── README.md
+└── package.json
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Home** - Landing page with hero and latest verse
+- **About** - Full story and mission
+- **Start Here** - New reader onboarding
+- **Subscribe** - Email subscription
+- **Connect** - Social links and contact
 
-## Deploy on Vercel
+## Mission
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To honor those who didn't survive by documenting the journey of building something generational. Every chapter a step closer to becoming a pillar of light for the community.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Design Principles
+
+- **Centered Layout** - All content perfectly centered
+- **High Contrast** - Black text on white background for maximum readability
+- **Responsive** - Mobile-first design
+- **Accessible** - WCAG compliant color contrast
+- **Biblical Aesthetic** - Testament-inspired design with ornamental dividers
+
+## License
+
+© 2024 Sebastian. All rights reserved.

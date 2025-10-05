@@ -1,103 +1,158 @@
-import Image from "next/image";
+import CTAButton from "@/components/CTAButton";
+import OrnamentalDivider from "@/components/OrnamentalDivider";
+import SectionHeader from "@/components/SectionHeader";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-parchment">
+      {/* Hero Section */}
+      <section className="max-w-3xl mx-auto px-6 py-12 md:py-16 mb-16">
+        <div className="text-center">
+          <h1 className="font-title text-6xl md:text-8xl font-bold text-black mb-6 leading-[1.1] tracking-tight uppercase">
+            The Book<br />of<br />Sebastian
+          </h1>
+          <p className="font-serif text-xl md:text-2xl text-dark-gray mb-8 leading-relaxed italic max-w-2xl mx-auto">
+            A Testament of Radical Accountability,<br />
+            Miraculous Survival, and Building Empire<br />
+            from a Guest Room
+          </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <OrnamentalDivider />
+
+          <div className="flex flex-col gap-4 items-center mt-8">
+            <CTAButton
+              href="https://bookofsebastian.substack.com"
+              variant="primary"
+              external={true}
+              utmCampaign="hero"
+            >
+              Read the Opening Verse
+            </CTAButton>
+            <CTAButton
+              href="https://bookofsebastian.substack.com/subscribe"
+              variant="secondary"
+              external={true}
+              utmCampaign="hero_subscribe"
+            >
+              Subscribe for Weekly Verses
+            </CTAButton>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* About Section */}
+      <section className="border-t border-b border-silver bg-white py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <SectionHeader>About the Testament</SectionHeader>
+
+          <div className="text-center space-y-8 w-full max-w-3xl mx-auto mt-8">
+            <p className="drop-cap font-serif text-lg md:text-xl text-black leading-relaxed text-center mx-auto">
+              At twelve, I asked the universe for a story worth telling. At twenty-two, it gave me brain cancer.
+              I survived against impossible odds—a medically certified miracle. But survival was just Act One.
+            </p>
+            <p className="font-serif text-lg md:text-xl text-black leading-relaxed text-center mx-auto">
+              I spent four years in a narcissistic marriage that nearly destroyed me. I escaped, drove 992 miles
+              to freedom, and started over in my brother's guest room with $77K in debt.
+            </p>
+            <p className="font-serif text-lg md:text-xl text-black leading-relaxed text-center mx-auto">
+              Now I'm documenting the journey in real-time: building empire, using insurance as foundation and
+              magic as mission, guided by The Foundation's radical accountability.
+            </p>
+            <p className="font-serif text-xl md:text-2xl text-royal-blue font-semibold italic mt-8 text-center mx-auto">
+              "This is my testimony. Every Sunday, a new verse.<br />
+              Every chapter, a step closer to becoming a pillar of light for my community."
+            </p>
+          </div>
+
+          <OrnamentalDivider />
+
+          <div className="text-center mt-8">
+            <CTAButton
+              href="/about"
+              variant="secondary"
+            >
+              Learn More About the Journey
+            </CTAButton>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Verse Preview */}
+      <section className="max-w-3xl mx-auto px-6 py-20 bg-off-white">
+        <SectionHeader>Latest Verse</SectionHeader>
+
+        <div className="border-l-4 border-royal-blue pl-8 py-8 my-8">
+          <div className="text-left">
+            <blockquote className="font-serif text-xl md:text-2xl text-black leading-relaxed italic mb-6">
+              "The universe delivered. I survived brain cancer against impossible odds. I escaped narcissistic abuse.
+              I rebuilt from nothing. Now I'm documenting every step of building empire from a guest room.
+              This is what I'm doing with the miracle I was given."
+            </blockquote>
+            <cite className="verse-ref block not-italic text-royal-blue font-medium">
+              — Sebastian 1:1
+            </cite>
+          </div>
+        </div>
+
+        <div className="text-center mt-8">
+          <CTAButton
+            href="https://bookofsebastian.substack.com"
+            variant="primary"
+            external={true}
+            utmCampaign="latest_verse"
+          >
+            Read on Substack
+          </CTAButton>
+        </div>
+      </section>
+
+      {/* Join Section */}
+      <section className="border-t border-silver bg-black text-white py-24">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="font-title text-sm uppercase tracking-wide text-silver mb-8 font-medium">
+            — • Join the Journey • —
+          </h2>
+          <p className="font-serif text-xl md:text-2xl mb-10 leading-relaxed">
+            Every Sunday, a new verse arrives in your inbox.<br />
+            Real-time documentation of transformation,<br />
+            accountability, and empire-building.
+          </p>
+
+          <div className="ornamental-divider mb-12 text-silver opacity-60">
+            ◆
+          </div>
+
+          <CTAButton
+            href="/subscribe"
+            variant="primary"
+          >
+            Subscribe Now
+          </CTAButton>
+        </div>
+      </section>
+
+      {/* Call to Start */}
+      <section className="max-w-3xl mx-auto px-6 py-20">
+        <div className="border-2 border-silver bg-white rounded-lg p-12 text-center">
+          <h2 className="font-title text-3xl md:text-4xl font-semibold text-black mb-6 tracking-wide">
+            New to The Book of Sebastian?
+          </h2>
+          <p className="font-serif text-xl text-black mb-10 leading-relaxed">
+            Start from the beginning and follow the complete journey.
+          </p>
+
+          <div className="ornamental-divider mb-10 text-silver opacity-60">
+            ◆
+          </div>
+
+          <CTAButton
+            href="/start"
+            variant="primary"
+          >
+            Start Here
+          </CTAButton>
+        </div>
+      </section>
     </div>
   );
 }

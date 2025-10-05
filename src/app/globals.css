@@ -1,26 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-serif: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  --font-title: 'Cormorant Garamond', Georgia, serif;
+
+  /* New Color Scheme - Black/Silver/Royal Blue */
+  --color-black: #000000;
+  --color-silver: #C0C0C0;
+  --color-royal-blue: #4169E1;
+  --color-white: #FFFFFF;
+  --color-off-white: #FAFAFA;
+  --color-dark-gray: #4A4A4A;
+
+  /* Legacy aliases for compatibility */
+  --color-parchment: #FFFFFF;
+  --color-burgundy: #4169E1;
+  --color-gold: #C0C0C0;
+  --color-charcoal: #000000;
+  --color-text-secondary: #4A4A4A;
+  --color-border: #C0C0C0;
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+  --space-2xl: 8rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-serif);
+  background: var(--color-white);
+  color: var(--color-black);
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--space-lg);
+}
+
+section {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-xl) var(--space-md);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-black);
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  font-size: 4rem;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  color: var(--color-black);
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0 var(--space-md);
+  }
+
+  section {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button, .btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-title {
+  font-family: var(--font-title);
+}
+
+/* Drop Cap Styling */
+.drop-cap::first-letter {
+  font-family: var(--font-title);
+  font-size: 4.5em;
+  font-weight: 600;
+  line-height: 0.85;
+  float: left;
+  margin: 0.1em 0.15em 0 0;
+  color: var(--color-royal-blue);
+}
+
+/* Ornamental Divider */
+.ornamental-divider {
+  text-align: center;
+  margin: var(--space-lg) 0;
+  color: var(--color-silver);
+  font-size: 1.25rem;
+  letter-spacing: 0.5em;
+  opacity: 1;
+}
+
+/* Verse Reference */
+.verse-ref {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--color-royal-blue);
+  letter-spacing: 0.05em;
+  margin-top: var(--space-md);
+  font-weight: 500;
+}
+
+/* Buttons and Interactive Elements */
+button,
+a.button,
+.btn {
+  border-radius: 4px;
+  padding: 1.25rem 3rem;
+  border-width: 1.5px;
+  transition: all 0.3s ease;
+  margin: var(--space-sm);
+}
+
+button:hover,
+a.button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+img {
+  border-radius: 8px;
+}
+
+/* Borders */
+hr,
+.divider,
+[class*="border"] {
+  border-color: var(--color-border);
+}
+
+/* FORCE CENTERING ON ALL ELEMENTS */
+.text-center {
+  text-align: center !important;
+}
+
+/* Ensure all flex containers center their children */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* Center all containers */
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Responsive centering */
+@media (max-width: 768px) {
+  section,
+  div,
+  h1, h2, h3, h4, h5, h6,
+  p {
+    text-align: center;
+  }
+
+  body {
+    align-items: center;
+  }
+}
+
+@media (min-width: 769px) {
+  section,
+  div.text-center,
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
 }
