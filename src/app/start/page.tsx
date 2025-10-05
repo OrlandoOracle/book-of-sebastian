@@ -3,7 +3,22 @@ import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
   title: 'Start Here | The Book of Sebastian',
-  description: 'New to The Book of Sebastian? Start your journey here with recommended reading order and key information about the weekly verses.',
+  description: 'Begin your journey. Read from the first verse and witness transformation in real-time. A modern testament of survival, accountability, and empire building.',
+  openGraph: {
+    title: 'Start Here | The Book of Sebastian',
+    description: 'Begin your journey. Read from the first verse and witness transformation in real-time.',
+    url: 'https://bookofsebastian.com/start',
+    siteName: 'The Book of Sebastian',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Start Here | The Book of Sebastian',
+    description: 'Begin your journey. Read from the first verse.',
+  },
+  alternates: {
+    canonical: 'https://bookofsebastian.com/start',
+  },
 };
 
 export default function StartHere() {

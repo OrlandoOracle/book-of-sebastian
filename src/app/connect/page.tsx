@@ -2,7 +2,22 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Connect | The Book of Sebastian',
-  description: 'Connect with Sebastian across platforms. Follow the journey, reach out for speaking engagements, or send a message.',
+  description: 'Follow the journey across platforms. Connect with Sebastian for speaking, collaboration, or to share your own story of transformation.',
+  openGraph: {
+    title: 'Connect | The Book of Sebastian',
+    description: 'Follow the journey across platforms. Connect with Sebastian.',
+    url: 'https://bookofsebastian.com/connect',
+    siteName: 'The Book of Sebastian',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Connect | The Book of Sebastian',
+    description: 'Follow the journey. Connect with Sebastian.',
+  },
+  alternates: {
+    canonical: 'https://bookofsebastian.com/connect',
+  },
 };
 
 export default function Connect() {
@@ -39,6 +54,34 @@ export default function Connect() {
             </div>
             <p className="text-gray-700">
               Read the weekly verses, subscribe for updates, and join the discussion.
+            </p>
+          </a>
+
+          {/* Medium */}
+          <a
+            href="https://medium.com/@bookofsebastian"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white border-2 border-silver rounded-lg p-8 hover:border-royal-blue transition-all group"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-royal-blue transition-colors">
+                  <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-title text-2xl font-semibold text-black">Medium</h3>
+                  <p className="text-dark-gray">Essays & Reflections</p>
+                </div>
+              </div>
+              <span className="text-royal-blue text-2xl opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+                →
+              </span>
+            </div>
+            <p className="text-black">
+              Read essays and reflections on Medium
             </p>
           </a>
 

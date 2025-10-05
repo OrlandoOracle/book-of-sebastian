@@ -1,6 +1,32 @@
 import CTAButton from "@/components/CTAButton";
 import OrnamentalDivider from "@/components/OrnamentalDivider";
 import SectionHeader from "@/components/SectionHeader";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'The Book of Sebastian | Modern Testament',
+  description: 'A testament for our time. Ancient wisdom meets modern truth. Weekly chronicles of transformation from brain cancer survivor to empire builder.',
+  openGraph: {
+    title: 'The Book of Sebastian | Modern Testament',
+    description: 'A testament for our time. Ancient wisdom meets modern truth.',
+    url: 'https://bookofsebastian.com',
+    siteName: 'The Book of Sebastian',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Book of Sebastian | Modern Testament',
+    description: 'A testament for our time. Ancient wisdom meets modern truth.',
+  },
+  alternates: {
+    canonical: 'https://bookofsebastian.com',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Home() {
   return (

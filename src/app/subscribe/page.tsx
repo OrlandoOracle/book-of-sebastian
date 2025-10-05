@@ -3,7 +3,22 @@ import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
   title: 'Subscribe | The Book of Sebastian',
-  description: 'Subscribe to receive weekly verses from The Book of Sebastian. Join the journey and get each new chapter delivered to your inbox every Sunday.',
+  description: 'Join the journey. Receive weekly verses delivered every Sunday. Real accountability, transformation, and empire building documented in real-time.',
+  openGraph: {
+    title: 'Subscribe | The Book of Sebastian',
+    description: 'Join the journey. Receive weekly verses delivered every Sunday.',
+    url: 'https://bookofsebastian.com/subscribe',
+    siteName: 'The Book of Sebastian',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Subscribe | The Book of Sebastian',
+    description: 'Join the journey. Weekly verses delivered to your inbox.',
+  },
+  alternates: {
+    canonical: 'https://bookofsebastian.com/subscribe',
+  },
 };
 
 export default function Subscribe() {
@@ -21,24 +36,37 @@ export default function Subscribe() {
 
       {/* Main Subscribe Section */}
       <section className="max-w-3xl mx-auto px-6 pb-12">
-        <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
-          <div className="text-center mb-10">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <div className="bg-white border-2 border-silver rounded-lg p-8 md:p-12">
+          <div className="text-center mb-8">
+            <h2 className="font-title text-3xl md:text-4xl font-semibold text-black mb-4">
               Subscribe for Weekly Verses
             </h2>
-            <p className="text-lg text-gray-700 mb-8">
+            <p className="text-lg text-black mb-8 leading-relaxed">
+              Join the community. Receive new chapters and insights directly to your inbox.
+            </p>
+          </div>
+
+          {/* Substack Embed */}
+          <div className="max-w-xl mx-auto mb-8">
+            <iframe
+              src="https://bookofsebastian.substack.com/embed"
+              width="100%"
+              height="320"
+              style={{
+                border: '1px solid #C0C0C0',
+                borderRadius: '8px',
+                background: 'white'
+              }}
+              frameBorder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
+
+          <div className="text-center">
+            <p className="text-base text-dark-gray mb-4">
               Every Sunday, a new chapter in the journey from brain cancer to empire building arrives in your inbox.
               Real accountability. Real transformation. No highlight reel.
             </p>
-
-            <CTAButton
-              href="https://bookofsebastian.substack.com/subscribe"
-              variant="primary"
-              external={true}
-              utmCampaign="subscribe_page"
-            >
-              Subscribe on Substack
-            </CTAButton>
           </div>
 
           {/* What Subscribers Get */}

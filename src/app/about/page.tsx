@@ -3,7 +3,22 @@ import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
   title: 'About | The Book of Sebastian',
-  description: 'The story behind The Book of Sebastian: from brain cancer miracle to building empire from a guest room. Learn about the mission, the author, and the journey.',
+  description: 'From brain cancer miracle at 22 to building empire from a guest room. The testament of radical accountability and transformation documented in real-time.',
+  openGraph: {
+    title: 'About Sebastian | Modern Testament',
+    description: 'From brain cancer miracle at 22 to building empire from a guest room.',
+    url: 'https://bookofsebastian.com/about',
+    siteName: 'The Book of Sebastian',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Sebastian | Modern Testament',
+    description: 'From brain cancer miracle at 22 to building empire from a guest room.',
+  },
+  alternates: {
+    canonical: 'https://bookofsebastian.com/about',
+  },
 };
 
 export default function About() {
