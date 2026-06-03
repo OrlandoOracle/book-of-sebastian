@@ -7,17 +7,24 @@ import { useEffect, useState } from "react";
 const LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/chapters", label: "The Book" },
-  { href: "/writing", label: "Writing" },
-  { href: "/start", label: "Start" },
-  { href: "/subscribe", label: "Subscribe" },
+  { href: "/musings", label: "Musings" },
+  { href: "/speaking", label: "Speaking" },
   { href: "/connect", label: "Connect" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
-  const active = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const active = (href: string) => {
+    if (href === "/") return pathname === "/";
+    // Musings is the hub for both the book and the essays.
+    if (href === "/musings")
+      return (
+        pathname.startsWith("/musings") ||
+        pathname.startsWith("/chapters") ||
+        pathname.startsWith("/writing")
+      );
+    return pathname.startsWith(href);
+  };
 
   // Hide on scroll-down, reveal on scroll-up.
   const [hidden, setHidden] = useState(false);

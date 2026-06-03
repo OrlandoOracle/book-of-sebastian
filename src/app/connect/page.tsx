@@ -34,41 +34,50 @@ export default function Connect() {
         </div>
       </section>
 
+      {/* Subscribe — the subscribe option lives here now */}
       <section className="sec">
-        <div className="mx-auto grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2">
-          <a
-            href="https://sebastiangerhardt.substack.com?utm_source=website&utm_medium=connect&utm_campaign=social"
-            className="oracle-card hover-lift p-8 text-left"
+        <div className="mx-auto max-w-xl text-center">
+          <p className="eyebrow mb-3">Subscribe</p>
+          <h2 className="font-title text-3xl font-semibold text-ink">
+            Get new <span className="gold-text">chapters</span> by email
+          </h2>
+          <p className="mx-auto mb-6 mt-3 max-w-md font-serif text-ink-soft">
+            The first chapters are free to read — then get each new one as the
+            work is finished. Free, unsubscribe anytime.
+          </p>
+          <div
+            className="oracle-card mx-auto max-w-md overflow-hidden"
+            style={{ borderRadius: "12px" }}
           >
-            <p className="eyebrow mb-3">Substack</p>
-            <h2 className="font-title text-2xl font-semibold text-left">
-              New chapters by email
-            </h2>
-            <p className="mt-2 text-left font-serif text-ink-soft">
-              The book as it&apos;s written, delivered when each chapter is
-              finished.
-            </p>
-            <span className="mt-4 inline-block font-sans text-sm uppercase tracking-[0.14em] text-gold">
-              Subscribe →
-            </span>
-          </a>
-
-          <a
-            href="mailto:sebastian@bookofsebastian.com"
-            className="oracle-card hover-lift p-8 text-left"
-          >
-            <p className="eyebrow mb-3">Email</p>
-            <h2 className="font-title text-2xl font-semibold text-left">
-              Get in touch
-            </h2>
-            <p className="mt-2 text-left font-serif text-ink-soft">
-              Questions, your own story, speaking and media — write directly.
-            </p>
-            <span className="mt-4 inline-block font-sans text-sm uppercase tracking-[0.14em] text-gold">
-              sebastian@bookofsebastian.com
-            </span>
-          </a>
+            <iframe
+              src="https://sebastiangerhardt.substack.com/embed"
+              title="Subscribe to The Book of Sebastian"
+              width="100%"
+              height={150}
+              scrolling="no"
+              style={{ border: 0, display: "block", colorScheme: "light" }}
+            />
+          </div>
         </div>
+      </section>
+
+      {/* Direct line */}
+      <section className="sec">
+        <a
+          href="mailto:sebastian@bookofsebastian.com"
+          className="oracle-card hover-lift mx-auto block max-w-xl p-8 text-left"
+        >
+          <p className="eyebrow mb-3">Email</p>
+          <h2 className="font-title text-2xl font-semibold text-left">
+            Get in touch
+          </h2>
+          <p className="mt-2 text-left font-serif text-ink-soft">
+            Questions, your own story, speaking and media — write directly.
+          </p>
+          <span className="mt-4 inline-block font-sans text-sm uppercase tracking-[0.14em] text-gold">
+            sebastian@bookofsebastian.com
+          </span>
+        </a>
       </section>
 
       <section className="sec text-center">

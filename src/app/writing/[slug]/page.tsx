@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPost, publishedPosts } from "@/content/posts";
-import CTAButton from "@/components/CTAButton";
+import SubscribeCTA from "@/components/SubscribeCTA";
 import styles from "../../chapters/chapters.module.css";
 
 export const dynamicParams = false;
@@ -108,16 +108,7 @@ export default async function PostPage({
           </Link>
         </div>
 
-        <div className="mt-12 text-center">
-          <CTAButton
-            href="https://sebastiangerhardt.substack.com/subscribe"
-            variant="primary"
-            external
-            utmCampaign="post_footer"
-          >
-            Get New Essays by Email
-          </CTAButton>
-        </div>
+        <SubscribeCTA kind="essay" />
       </div>
     </article>
   );

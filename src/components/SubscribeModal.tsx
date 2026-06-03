@@ -110,8 +110,8 @@ export default function SubscribeModal({
                 lineHeight: 1.6,
               }}
             >
-              New chapters and essays in your inbox, as the work is finished.
-              Free. Unsubscribe anytime.
+              The first chapters are free to read. Get each new one by email as
+              the work is finished — free, unsubscribe anytime.
             </p>
 
             {/* Substack's own widget — runs on substack.com, so the subscribe

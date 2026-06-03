@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-sans:
-    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-serif: "EB Garamond", Georgia, serif;
-  --font-title: "Cormorant Garamond", Georgia, serif;
+    var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: var(--font-eb), Georgia, serif;
+  --font-title: var(--font-cormorant), Georgia, serif;
 
   /* Oracle dark palette */
   --color-bg: #0a0a0f;
@@ -95,24 +94,150 @@ body {
   min-height: 100vh;
 }
 
-/* Ambient depth: soft gold-tinted radial bloom + fine grain so the dark never reads flat. */
-body::before {
-  content: "";
+/* ---------- Animated cosmos (mystical, smokey, oracular void) ---------- */
+.cosmos {
   position: fixed;
   inset: 0;
   z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--color-bg);
+}
+.cosmos > span {
+  position: absolute;
+  inset: -25%;
+  display: block;
+  will-change: transform, opacity;
+}
+
+/* drifting nebula clouds — violet / indigo / gold / rose bloom */
+.cosmos__nebula {
   background:
     radial-gradient(
-      1100px 700px at 50% -10%,
-      rgba(200, 164, 92, 0.1),
-      transparent 60%
+      42% 38% at 25% 28%,
+      rgba(34, 58, 120, 0.34),
+      transparent 70%
     ),
     radial-gradient(
-      900px 600px at 100% 100%,
-      rgba(200, 164, 92, 0.05),
-      transparent 55%
+      46% 42% at 80% 20%,
+      rgba(120, 134, 162, 0.12),
+      transparent 72%
     ),
-    var(--color-bg);
+    radial-gradient(
+      52% 48% at 68% 78%,
+      rgba(18, 36, 84, 0.36),
+      transparent 70%
+    ),
+    radial-gradient(
+      38% 34% at 10% 82%,
+      rgba(48, 72, 118, 0.18),
+      transparent 72%
+    );
+  filter: blur(6px);
+  animation: nebula-drift 30s ease-in-out infinite alternate;
+}
+
+/* slow smokey churn behind the clouds */
+.cosmos__smoke {
+  background:
+    radial-gradient(
+      60% 60% at 50% 50%,
+      rgba(30, 52, 104, 0.1),
+      transparent 60%
+    ),
+    conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(130, 144, 168, 0.06),
+      rgba(16, 30, 72, 0.28),
+      rgba(10, 22, 56, 0.24),
+      rgba(40, 64, 110, 0.14),
+      rgba(130, 144, 168, 0.06)
+    );
+  filter: blur(48px);
+  opacity: 0.8;
+  animation: smoke-rotate 64s linear infinite;
+}
+
+/* fine drifting, twinkling starfield */
+.cosmos__stars {
+  inset: 0;
+  background-image:
+    radial-gradient(
+      1px 1px at 20px 30px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 120px 80px,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 200px 160px,
+      rgba(190, 204, 228, 0.75),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 300px 50px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 80px 220px,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 260px 280px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
+  background-repeat: repeat;
+  background-size: 340px 340px;
+  animation:
+    stars-twinkle 4.5s ease-in-out infinite alternate,
+    stars-drift 140s linear infinite;
+}
+
+@keyframes nebula-drift {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(3%, 2%, 0) scale(1.15);
+  }
+}
+@keyframes smoke-rotate {
+  0% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+@keyframes stars-twinkle {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes stars-drift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 340px 680px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cosmos__nebula,
+  .cosmos__smoke,
+  .cosmos__stars {
+    animation: none;
+  }
 }
 
 body::after {
@@ -366,7 +491,7 @@ a {
 .hero2 {
   position: relative;
   width: 100%;
-  background: var(--color-bg);
+  background: transparent;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -393,16 +518,7 @@ a {
   justify-content: center;
 }
 .hero2__imgwrap::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    0deg,
-    var(--color-bg) 0%,
-    rgba(10, 10, 15, 0) 16%
-  );
+  content: none;
 }
 .hero2__img {
   width: 100%;
@@ -411,6 +527,19 @@ a {
   object-fit: contain;
   object-position: center;
   display: block;
+  /* dissolve the bottom edge into the cosmos (heavy, no hard edge) */
+  -webkit-mask-image: linear-gradient(
+    0deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.45) 10%,
+    #000 28%
+  );
+  mask-image: linear-gradient(
+    0deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.45) 10%,
+    #000 28%
+  );
 }
 @media (min-width: 900px) {
   .hero2 {
@@ -430,20 +559,34 @@ a {
     height: 100%;
   }
   .hero2__imgwrap::before {
-    background:
-      linear-gradient(
-        90deg,
-        var(--color-bg) 0%,
-        rgba(10, 10, 15, 0.9) 12%,
-        rgba(10, 10, 15, 0) 44%
-      ),
-      linear-gradient(0deg, var(--color-bg) 0%, rgba(10, 10, 15, 0) 18%);
+    content: none;
   }
   .hero2__img {
     width: 100%;
     height: 100%;
     max-height: 900px;
     object-fit: contain;
+    /* dissolve left + bottom edges into the cosmos (intersect both fades) */
+    -webkit-mask-image:
+      linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(0, 0, 0, 0.25) 22%,
+        rgba(0, 0, 0, 0.7) 46%,
+        #000 72%
+      ),
+      linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.4) 12%, #000 34%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(0, 0, 0, 0.25) 22%,
+        rgba(0, 0, 0, 0.7) 46%,
+        #000 72%
+      ),
+      linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.4) 12%, #000 34%);
+    mask-composite: intersect;
   }
 }
 

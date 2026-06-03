@@ -45,7 +45,8 @@ export default function Subscribe() {
             Get new <span className="gold-text">chapters</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl font-serif text-xl italic text-ink-soft">
-            By email, as the work is finished. Free. Unsubscribe anytime.
+            Start with the first chapters free — then get each new one by email
+            as the work is finished. Free. Unsubscribe anytime.
           </p>
         </div>
       </section>

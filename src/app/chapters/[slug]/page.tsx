@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getChapter, publishedChapters } from "@/content/chapters";
-import CTAButton from "@/components/CTAButton";
+import SubscribeCTA from "@/components/SubscribeCTA";
 import styles from "../chapters.module.css";
 
 export const dynamicParams = false; // static export: only published slugs exist; others 404
@@ -116,16 +116,7 @@ export default async function ChapterPage({
           </Link>
         </div>
 
-        <div className="text-center mt-12">
-          <CTAButton
-            href="https://sebastiangerhardt.substack.com/subscribe"
-            variant="primary"
-            external={true}
-            utmCampaign="chapter_footer"
-          >
-            Get New Chapters by Email
-          </CTAButton>
-        </div>
+        <SubscribeCTA kind="chapter" />
       </div>
     </article>
   );

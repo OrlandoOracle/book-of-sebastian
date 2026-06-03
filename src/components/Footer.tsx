@@ -1,12 +1,11 @@
 import Link from "next/link";
+import SubscribeModal from "./SubscribeModal";
 
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/chapters", label: "The Book" },
-  { href: "/writing", label: "Writing" },
-  { href: "/start", label: "Start" },
-  { href: "/subscribe", label: "Subscribe" },
+  { href: "/musings", label: "Musings" },
+  { href: "/speaking", label: "Speaking" },
   { href: "/connect", label: "Connect" },
 ];
 
@@ -26,6 +25,13 @@ export default function Footer() {
           </p>
         </div>
 
+        <div className="mb-10 flex flex-col items-center gap-3">
+          <p className="font-serif text-ink-soft">
+            New chapters by email, as the work is finished.
+          </p>
+          <SubscribeModal label="Get New Chapters" variant="primary" />
+        </div>
+
         <div className="hairline mb-8" />
 
         <div className="mb-8 flex flex-wrap justify-center gap-x-6 gap-y-2 font-sans text-xs uppercase tracking-[0.14em]">
@@ -38,21 +44,6 @@ export default function Footer() {
               {l.label}
             </Link>
           ))}
-        </div>
-
-        <div className="mb-10 flex flex-wrap justify-center gap-6 text-sm">
-          <a
-            href="https://sebastiangerhardt.substack.com?utm_source=website&utm_medium=footer&utm_campaign=landing"
-            className="font-sans text-ink-faint hover:text-gold transition-colors"
-          >
-            Substack
-          </a>
-          <a
-            href="mailto:sebastian@bookofsebastian.com"
-            className="font-sans text-ink-faint hover:text-gold transition-colors"
-          >
-            Email
-          </a>
         </div>
 
         <div className="border-t border-line pt-8 text-center font-sans text-xs text-ink-faint">

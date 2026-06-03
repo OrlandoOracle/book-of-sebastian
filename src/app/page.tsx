@@ -44,15 +44,6 @@ const GALLERY = [
   },
 ];
 
-const GALLERY2 = [
-  {
-    src: "/photos/live-fringe.jpg",
-    alt: "Sebastian performing his show The Other Side on stage in a leather jacket",
-    caption: "The Other Side — live",
-    pos: "center",
-  },
-];
-
 export default function Home() {
   return (
     <div className="w-full">
@@ -174,56 +165,6 @@ export default function Home() {
                 />
               </figure>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Second photo band — live / out in the world */}
-      <section className="px-5 pb-12 md:px-8 md:pb-16">
-        <div className="mx-auto max-w-3xl">
-          <p className="eyebrow mb-8 text-center">Out in the World</p>
-          <div className="grid grid-cols-1 gap-4">
-            {GALLERY2.map((g) => (
-              <figure
-                key={g.src}
-                className="hover-lift oracle-card overflow-hidden p-0"
-              >
-                <img
-                  src={g.src}
-                  alt={g.alt}
-                  loading="lazy"
-                  style={{
-                    width: "100%",
-                    height: "440px",
-                    objectFit: "cover",
-                    objectPosition: g.pos,
-                    display: "block",
-                  }}
-                />
-                <figcaption className="px-5 py-4 text-center font-sans text-xs uppercase tracking-[0.14em] text-ink-soft">
-                  {g.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* A line from the book */}
-      <section className="px-6 py-28 md:py-32">
-        <div className="glass-panel reveal mx-auto max-w-2xl p-12 md:p-16 text-center">
-          <p className="eyebrow mb-6">From the Book</p>
-          <blockquote className="font-serif text-2xl md:text-3xl italic leading-relaxed text-ink">
-            “People sometimes ask if magic is about deception. It isn&apos;t.
-            The trick is the doorway. The wonder is what walks through.”
-          </blockquote>
-          <cite className="verse-ref mt-6 block not-italic">
-            — The Trick Is the Doorway
-          </cite>
-          <div className="mt-8">
-            <CTAButton href="/chapters" variant="primary">
-              Read the Chapters
-            </CTAButton>
           </div>
         </div>
       </section>
