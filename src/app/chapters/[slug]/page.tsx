@@ -5,6 +5,8 @@ import { getChapter, publishedChapters } from "@/content/chapters";
 import CTAButton from "@/components/CTAButton";
 import styles from "../chapters.module.css";
 
+export const dynamicParams = false; // static export: only published slugs exist; others 404
+
 export function generateStaticParams() {
   return publishedChapters.map((c) => ({ slug: c.slug }));
 }

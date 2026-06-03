@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "book-of-sebastian",
+  "compatibility_date": "2026-06-03",
+  "routes": [
+    { "pattern": "bookofsebastian.com/*", "zone_name": "bookofsebastian.com" },
+    { "pattern": "www.bookofsebastian.com/*", "zone_name": "bookofsebastian.com" }
+  ],
+  // Static-only site: Next.js `output: export` writes to ./out, served as Worker assets.
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
