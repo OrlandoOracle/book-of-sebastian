@@ -1,4 +1,4 @@
-// AUTO-GENERATED from _blog-drafts-diagnosis-spine.md. `published` gates public visibility.
+// AUTO-GENERATED from _blog-drafts-*.md. `published` gates public visibility.
 export interface Post {
   number: number; slug: string; title: string; series: string;
   date: string; published: boolean; excerpt: string; body: string;
@@ -54,6 +54,46 @@ export const posts: Post[] = [
     published: true,
     excerpt: "I was awake from midnight to five in a cabin in Norway, and the thing I couldn't stop thinking was that I am living on borrowed time.",
     body: "I was awake from midnight to five in a cabin in Norway, and the thing I couldn't stop thinking was that I am living on borrowed time.\n\nI had gotten myself somewhere with no cell service and nothing to fix, and my body would not power down. The hands want a deck of cards. The mind wants a problem. Stillness, for me, doesn't arrive on its own — I mostly have to reach for something chemical to find it, and I don't love that I do.\n\nThe anniversary was eight days out. May 23rd. Every year it comes whether I make a plan for it or not.\n\nHere is the bind, and I'll name it the way I named it that morning: the thing that got me here is the thing that won't let me arrive. The wired-on, never-off engine is what built everything — the shows, the rebuild, the life. It's also what's wearing me down. I don't get to keep one without the other. They're the same machine.\n\nI don't have the resolution. People want the survivor to have made peace, to sit in the cabin and feel the quiet and be grateful. Some mornings I get there. That morning I didn't. I sat in the dark on borrowed time and watched the window go gray, and the most honest thing I can tell you is that the gratitude and the exhaustion come from exactly the same place, and I have not figured out how to have one without the other.\n\nI'm working on it. That's not a triumphant ending. It's just the true one.",
+  },
+  {
+    number: 6,
+    slug: "the-door-opens-by-itself",
+    title: "The Door Opens by Itself",
+    series: "The Stage",
+    date: "2026-06-03",
+    published: true,
+    excerpt: "The show started, the way a lot of things start for me, in a quiet room with the dog asleep at my feet.",
+    body: "The show started, the way a lot of things start for me, in a quiet room with the dog asleep at my feet.\n\nI'd been trying for months to build a one-man show out of the worst year of my life — magic, but not the kind where the trick is the point. I wanted a room to walk out feeling the way I feel on an ordinary Tuesday I wasn't supposed to be alive for. I had pieces. I didn't have the door.\n\nThen one morning, in a meditation, I saw it. The only thing on the stage would be a door. No table, no cabinet, no velvet. A door, standing on its own. And it would open by itself, and the things I needed for the next piece would come from the other side of it.\n\nI'd open the show by walking out of that door. _Welcome to the other side._ I wouldn't tell them about the cancer yet. I'd let it sit under the floor, and talk instead about the idea that the choices we make shape what's real — that there's more than one version of how a thing goes, and you're standing in one of them.\n\nIt took me a while to notice I'd built my whole life around that image without meaning to. The door between the world that ended and the one that came after. I'd been living in the frame of it for years. I just hadn't put it on a stage until then.\n\nA door that opens by itself, and you walk through, and the room is different on the other side. That's the show. It's also the only honest map I have of what happened to me.",
+  },
+  {
+    number: 7,
+    slug: "hallucinogenic-magic",
+    title: "Hallucinogenic Magic",
+    series: "The Stage",
+    date: "2026-06-03",
+    published: true,
+    excerpt: "People think magic is about fooling you. Mine isn't, or it's not only that.",
+    body: "People think magic is about fooling you. Mine isn't, or it's not only that.\n\nWhat I'm actually after is harder to name. I want you to walk out of the theater and find the grass greener than it was when you walked in. I want the parking lot to look, for a minute, like a miracle. The tricks are the vehicle. The destination is a feeling — the one I've had every morning since I woke up from a surgery I wasn't supposed to wake up from.\n\nA mentor of mine said the thing that unlocked it. _Leave the constraints of what other magic shows have done. Don't try to emulate anybody. This is personal storytelling._ He gave me permission to stop performing and start telling the truth with my hands.\n\nThe test I set myself: I should be able to do the whole show and not a single trick, and still make the room feel what I want them to feel. If the magic is load-bearing, I've built it wrong. The magic is the doorway. The thing that walks through is the point.\n\nHere's the line I kept, the one the whole show grew out of. Leading up to the surgery I felt everything at once — fear, hope, the works. Only one word describes how it felt to wake up: bliss. After that, the math changed for good. Something good happens? Great — I wasn't supposed to be here for it. Something bad happens? Great — I wasn't supposed to be here for that either. Everything pales next to the void.\n\nI don't have a better word for what I'm trying to do than this: I want to alter how the room sees, for an hour, the way the diagnosis altered how I see, for good. Not a trick. A shift. The kind you don't undo.",
+  },
+  {
+    number: 8,
+    slug: "the-projector-i-left-at-home",
+    title: "The Projector I Left at Home",
+    series: "The Stage",
+    date: "2026-06-03",
+    published: true,
+    excerpt: "Opening night of my first real tour, the projector was in my bedroom instead of the bin.",
+    body: "Opening night of my first real tour, the projector was in my bedroom instead of the bin.\n\nI found out when I needed it. Months of building, years of writing, a set I'd hauled across town, thirty-three tickets sold — and the video presentation, the thing half the show was timed to, was sitting on the floor at home. So I did the show without it. I spent the whole hour in my head: remembering the script, chasing the next cue, a step behind myself the entire time.\n\nI wrote it down plainly the next morning. _I was so in my head, trying to remember the script, what the next cue was, and I wasn't fully prepared, so I am very unhappy with how the show went._ No spin. It wasn't good. I knew it wasn't good.\n\nSix nights later, same tour, I did the best show of my life to that point. The A/V worked. I missed a couple of cues and nobody could tell. The magicians in the room told me it was the best magic show at the Fringe.\n\nThe distance between those two nights is the whole job. Not the standing ovation — the part before it, where you walk out under-prepared, with the wrong thing in your bag, and you deliver anyway, badly, in front of people who paid. You don't get the good night without surviving the bad one first. I left the projector at home so I'd learn to be the show even when the show falls apart.",
+  },
+  {
+    number: 9,
+    slug: "best-of-venue-278-speeding-ticket",
+    title: "Best of Venue, $278 Speeding Ticket",
+    series: "The Stage",
+    date: "2026-06-03",
+    published: true,
+    excerpt: "I won Best of Venue. Then I got pulled over doing 70 in a 45 on the drive home, and the car's air conditioning died in the Florida heat.",
+    body: "I won Best of Venue. Then I got pulled over doing 70 in a 45 on the drive home, and the car's air conditioning died in the Florida heat.\n\nBoth true, the same night. The festival handed me an award — a properly award-winning show now, the kind of sentence you put on a poster. And somewhere on the highway between the theater and my bed, a state trooper handed me a $278 ticket, and the compressor in my car gave out, and the fix was going to run about twenty-two hundred dollars I did not have.\n\nMy dad covered the repair. I counted it the next morning — twenty-two hundred and change. I'd been hoping to put money like that toward the debt. Instead it went to a compressor. It wasn't getting me ahead; it was keeping me from falling behind. That's most of what money did for me in those years.\n\nThis is the part nobody photographs. The award and the overdraft live in the same twenty-four hours. You can be, on paper, an award-winning artist, and also a guy doing math in a hot car on the side of the turnpike, hoping the alternator holds.\n\nI wrote one line that night I still believe: _The Other Side was the phoenix rising from the ashes. Time to take flight._ I meant it. I also meant the ticket, and the compressor, and my dad's money. Both things are the story. Anyone who only tells you the first one is selling something.",
   },
 ];
 
