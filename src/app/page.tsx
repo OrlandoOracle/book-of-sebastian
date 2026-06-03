@@ -1,26 +1,29 @@
 import CTAButton from "@/components/CTAButton";
 import OrnamentalDivider from "@/components/OrnamentalDivider";
 import SectionHeader from "@/components/SectionHeader";
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'The Book of Sebastian | Modern Testament',
-  description: 'A testament for our time. Ancient wisdom meets modern truth. Weekly chronicles of transformation from brain cancer survivor to empire builder.',
+  title: "The Book of Sebastian",
+  description:
+    "The memoir of a magician and brain cancer survivor — the doorway between the life that ended and the life that came after. New chapters as the work is finished.",
   openGraph: {
-    title: 'The Book of Sebastian | Modern Testament',
-    description: 'A testament for our time. Ancient wisdom meets modern truth.',
-    url: 'https://bookofsebastian.com',
-    siteName: 'The Book of Sebastian',
-    locale: 'en_US',
-    type: 'website',
+    title: "The Book of Sebastian",
+    description:
+      "The doorway between the life that ended and the life that came after.",
+    url: "https://bookofsebastian.com",
+    siteName: "The Book of Sebastian",
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'The Book of Sebastian | Modern Testament',
-    description: 'A testament for our time. Ancient wisdom meets modern truth.',
+    card: "summary_large_image",
+    title: "The Book of Sebastian",
+    description:
+      "The doorway between the life that ended and the life that came after.",
   },
   alternates: {
-    canonical: 'https://bookofsebastian.com',
+    canonical: "https://bookofsebastian.com",
   },
   robots: {
     index: true,
@@ -35,24 +38,25 @@ export default function Home() {
       <section className="max-w-3xl mx-auto px-6 py-12 md:py-16 mb-16">
         <div className="text-center">
           <h1 className="font-title text-6xl md:text-8xl font-bold text-black mb-6 leading-[1.1] tracking-tight uppercase">
-            The Book<br />of<br />Sebastian
+            The Book
+            <br />
+            of
+            <br />
+            Sebastian
           </h1>
           <p className="font-serif text-xl md:text-2xl text-dark-gray mb-8 leading-relaxed italic max-w-2xl mx-auto">
-            A Testament of Radical Accountability,<br />
-            Miraculous Survival, and Building Empire<br />
-            from a Guest Room
+            A magician. A brain cancer survivor.
+            <br />
+            The doorway between the life that ended
+            <br />
+            and the life that came after.
           </p>
 
           <OrnamentalDivider />
 
           <div className="flex flex-col gap-4 items-center mt-8">
-            <CTAButton
-              href="https://sebastiangerhardt.substack.com"
-              variant="primary"
-              external={true}
-              utmCampaign="hero"
-            >
-              Read the Opening Verse
+            <CTAButton href="/chapters" variant="primary">
+              Start Reading
             </CTAButton>
             <CTAButton
               href="https://sebastiangerhardt.substack.com/subscribe"
@@ -60,7 +64,7 @@ export default function Home() {
               external={true}
               utmCampaign="hero_subscribe"
             >
-              Subscribe for Weekly Verses
+              Get New Chapters by Email
             </CTAButton>
           </div>
         </div>
@@ -69,65 +73,57 @@ export default function Home() {
       {/* About Section */}
       <section className="border-t border-b border-silver bg-white py-20">
         <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader>About the Testament</SectionHeader>
+          <SectionHeader>Two Worlds</SectionHeader>
 
-          <div className="text-center space-y-8 w-full max-w-3xl mx-auto mt-8">
+          <div className="text-center space-y-8 w-full max-w-2xl mx-auto mt-8">
             <p className="drop-cap font-serif text-lg md:text-xl text-black leading-relaxed text-center mx-auto">
-              At twelve, I asked the universe for a story worth telling. At twenty-two, it gave me brain cancer.
-              I survived against impossible odds—a medically certified miracle. But survival was just Act One.
+              I see the world twice. That is not a way of speaking. It is my
+              eyes. Most of the time my brain lays the two pictures over each
+              other and I see one world. When I am tired, or when something
+              matters, they pull apart.
             </p>
             <p className="font-serif text-lg md:text-xl text-black leading-relaxed text-center mx-auto">
-              I spent four years in a narcissistic marriage that nearly destroyed me. I escaped, drove 992 miles
-              to freedom, and started over in my brother's guest room with $77K in debt.
+              I grew up doing magic. The first world. In 2018, at twenty-two,
+              the second one arrived — Grade 4 pineoblastoma, and no insurance
+              to meet it. I survived. The version of me that thought time was a
+              thing I owned did not.
             </p>
             <p className="font-serif text-lg md:text-xl text-black leading-relaxed text-center mx-auto">
-              Now I'm documenting the journey in real-time: building empire, using insurance as foundation and
-              magic as mission, guided by The Foundation's radical accountability.
-            </p>
-            <p className="font-serif text-xl md:text-2xl text-royal-blue font-semibold italic mt-8 text-center mx-auto">
-              "This is my testimony. Every Sunday, a new verse.<br />
-              Every chapter, a step closer to becoming a pillar of light for my community."
+              This is the book about what came after. The survival, the rebuild,
+              the doorway. I write it down a chapter at a time. I am not in a
+              hurry.
             </p>
           </div>
 
           <OrnamentalDivider />
 
           <div className="text-center mt-8">
-            <CTAButton
-              href="/about"
-              variant="secondary"
-            >
-              Learn More About the Journey
+            <CTAButton href="/about" variant="secondary">
+              About the Author
             </CTAButton>
           </div>
         </div>
       </section>
 
-      {/* Latest Verse Preview */}
+      {/* A Line From the Book */}
       <section className="max-w-3xl mx-auto px-6 py-20 bg-off-white">
-        <SectionHeader>Latest Verse</SectionHeader>
+        <SectionHeader>From the Book</SectionHeader>
 
         <div className="border-l-4 border-royal-blue pl-8 py-8 my-8">
           <div className="text-left">
             <blockquote className="font-serif text-xl md:text-2xl text-black leading-relaxed italic mb-6">
-              "The universe delivered. I survived brain cancer against impossible odds. I escaped narcissistic abuse.
-              I rebuilt from nothing. Now I'm documenting every step of building empire from a guest room.
-              This is what I'm doing with the miracle I was given."
+              "People sometimes ask if magic is about deception. It isn't. The
+              trick is the doorway. The wonder is what walks through."
             </blockquote>
             <cite className="verse-ref block not-italic text-royal-blue font-medium">
-              — Sebastian 1:1
+              — The Trick Is the Doorway
             </cite>
           </div>
         </div>
 
         <div className="text-center mt-8">
-          <CTAButton
-            href="https://sebastiangerhardt.substack.com"
-            variant="primary"
-            external={true}
-            utmCampaign="latest_verse"
-          >
-            Read on Substack
+          <CTAButton href="/chapters" variant="primary">
+            Read the Chapters
           </CTAButton>
         </div>
       </section>
@@ -136,23 +132,20 @@ export default function Home() {
       <section className="border-t border-silver bg-black text-white py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-title text-sm uppercase tracking-wide text-silver mb-8 font-medium">
-            — • Join the Journey • —
+            — • Follow the Book • —
           </h2>
           <p className="font-serif text-xl md:text-2xl mb-10 leading-relaxed">
-            Every Sunday, a new verse arrives in your inbox.<br />
-            Real-time documentation of transformation,<br />
-            accountability, and empire-building.
+            New chapters arrive as the work is finished.
+            <br />
+            No schedule. No filler. The book, as it gets written.
           </p>
 
           <div className="ornamental-divider mb-12 text-silver opacity-60">
             ◆
           </div>
 
-          <CTAButton
-            href="/subscribe"
-            variant="primary"
-          >
-            Subscribe Now
+          <CTAButton href="/subscribe" variant="primary">
+            Get New Chapters by Email
           </CTAButton>
         </div>
       </section>
@@ -164,17 +157,14 @@ export default function Home() {
             New to The Book of Sebastian?
           </h2>
           <p className="font-serif text-xl text-black mb-10 leading-relaxed">
-            Start from the beginning and follow the complete journey.
+            Start at the first chapter and read through the doorway.
           </p>
 
           <div className="ornamental-divider mb-10 text-silver opacity-60">
             ◆
           </div>
 
-          <CTAButton
-            href="/start"
-            variant="primary"
-          >
+          <CTAButton href="/start" variant="primary">
             Start Here
           </CTAButton>
         </div>

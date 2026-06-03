@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 interface SEOProps {
   title?: string;
@@ -8,15 +8,16 @@ interface SEOProps {
 }
 
 export function generateMetadata({
-  title = 'The Book of Sebastian',
-  description = 'A testament of radical accountability, miraculous survival, and building empire from a guest room. Weekly verses chronicling the journey from brain cancer to entrepreneurship.',
-  path = '',
-  ogImage = '/og-image.png'
+  title = "The Book of Sebastian",
+  description = "The memoir of a magician and brain cancer survivor — the doorway between the life that ended and the life that came after. New chapters as the work is finished.",
+  path = "",
+  ogImage = "/og-image.png",
 }: SEOProps = {}): Metadata {
-  const baseUrl = 'https://bookofsebastian.com';
-  const fullTitle = title === 'The Book of Sebastian'
-    ? title
-    : `${title} | The Book of Sebastian`;
+  const baseUrl = "https://bookofsebastian.com";
+  const fullTitle =
+    title === "The Book of Sebastian"
+      ? title
+      : `${title} | The Book of Sebastian`;
   const url = `${baseUrl}${path}`;
 
   return {
@@ -26,9 +27,9 @@ export function generateMetadata({
       title: fullTitle,
       description,
       url,
-      siteName: 'The Book of Sebastian',
-      locale: 'en_US',
-      type: 'website',
+      siteName: "The Book of Sebastian",
+      locale: "en_US",
+      type: "website",
       images: [
         {
           url: ogImage,
@@ -39,7 +40,7 @@ export function generateMetadata({
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: fullTitle,
       description,
       images: [ogImage],

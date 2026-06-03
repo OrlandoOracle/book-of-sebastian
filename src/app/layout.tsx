@@ -6,10 +6,12 @@ import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   title: "The Book of Sebastian",
-  description: "A testament of radical accountability, miraculous survival, and building empire from a guest room. Weekly verses chronicling the journey from brain cancer to entrepreneurship.",
+  description:
+    "The memoir of a magician and brain cancer survivor — the doorway between the life that ended and the life that came after. New chapters as the work is finished.",
   openGraph: {
     title: "The Book of Sebastian",
-    description: "A testament of radical accountability, miraculous survival, and building empire from a guest room.",
+    description:
+      "The doorway between the life that ended and the life that came after.",
     url: "https://bookofsebastian.com",
     siteName: "The Book of Sebastian",
     locale: "en_US",
@@ -18,7 +20,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The Book of Sebastian",
-    description: "A testament of radical accountability, miraculous survival, and building empire from a guest room.",
+    description:
+      "The doorway between the life that ended and the life that came after.",
   },
   robots: {
     index: true,

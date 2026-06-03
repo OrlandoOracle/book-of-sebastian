@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
@@ -21,9 +21,9 @@ export default function Header() {
           <Link
             href="/"
             className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              isActive('/')
-                ? 'text-royal-blue border-b-2 border-royal-blue'
-                : 'text-dark-gray hover:text-royal-blue'
+              isActive("/")
+                ? "text-royal-blue border-b-2 border-royal-blue"
+                : "text-dark-gray hover:text-royal-blue"
             }`}
           >
             Home
@@ -31,19 +31,29 @@ export default function Header() {
           <Link
             href="/about"
             className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              isActive('/about')
-                ? 'text-royal-blue border-b-2 border-royal-blue'
-                : 'text-dark-gray hover:text-royal-blue'
+              isActive("/about")
+                ? "text-royal-blue border-b-2 border-royal-blue"
+                : "text-dark-gray hover:text-royal-blue"
             }`}
           >
             About
           </Link>
           <Link
+            href="/chapters"
+            className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
+              pathname.startsWith("/chapters")
+                ? "text-royal-blue border-b-2 border-royal-blue"
+                : "text-dark-gray hover:text-royal-blue"
+            }`}
+          >
+            The Book
+          </Link>
+          <Link
             href="/start"
             className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              isActive('/start')
-                ? 'text-royal-blue border-b-2 border-royal-blue'
-                : 'text-dark-gray hover:text-royal-blue'
+              isActive("/start")
+                ? "text-royal-blue border-b-2 border-royal-blue"
+                : "text-dark-gray hover:text-royal-blue"
             }`}
           >
             Start Here
@@ -51,9 +61,9 @@ export default function Header() {
           <Link
             href="/subscribe"
             className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              isActive('/subscribe')
-                ? 'text-royal-blue border-b-2 border-royal-blue'
-                : 'text-dark-gray hover:text-royal-blue'
+              isActive("/subscribe")
+                ? "text-royal-blue border-b-2 border-royal-blue"
+                : "text-dark-gray hover:text-royal-blue"
             }`}
           >
             Subscribe
@@ -61,9 +71,9 @@ export default function Header() {
           <Link
             href="/connect"
             className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              isActive('/connect')
-                ? 'text-royal-blue border-b-2 border-royal-blue'
-                : 'text-dark-gray hover:text-royal-blue'
+              isActive("/connect")
+                ? "text-royal-blue border-b-2 border-royal-blue"
+                : "text-dark-gray hover:text-royal-blue"
             }`}
           >
             Connect

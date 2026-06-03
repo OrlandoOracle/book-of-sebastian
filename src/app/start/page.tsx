@@ -1,196 +1,151 @@
-import { Metadata } from 'next';
-import CTAButton from '@/components/CTAButton';
+import { Metadata } from "next";
+import CTAButton from "@/components/CTAButton";
+import SectionHeader from "@/components/SectionHeader";
+import OrnamentalDivider from "@/components/OrnamentalDivider";
 
 export const metadata: Metadata = {
-  title: 'Start Here | The Book of Sebastian',
-  description: 'Begin your journey. Your guide to navigating the testament.',
+  title: "Start Here | The Book of Sebastian",
+  description: "New to the book? How to read it, and where to begin.",
   openGraph: {
-    title: 'Start Here | The Book of Sebastian',
-    description: 'Begin your journey. Your guide to navigating the testament.',
-    url: 'https://bookofsebastian.com/start',
-    siteName: 'The Book of Sebastian',
-    type: 'website',
+    title: "Start Here | The Book of Sebastian",
+    description: "New to the book? How to read it, and where to begin.",
+    url: "https://bookofsebastian.com/start",
+    siteName: "The Book of Sebastian",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Start Here | The Book of Sebastian',
-    description: 'Begin your journey. Your guide to navigating the testament.',
+    card: "summary_large_image",
+    title: "Start Here | The Book of Sebastian",
+    description: "New to the book? How to read it, and where to begin.",
   },
   alternates: {
-    canonical: 'https://bookofsebastian.com/start',
+    canonical: "https://bookofsebastian.com/start",
   },
 };
 
 export default function StartHere() {
   return (
-    <div className="bg-cream">
+    <div>
       {/* Hero */}
-      <section className="max-w-4xl mx-auto px-6 py-20">
-        <h1 className="font-serif text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-center">
-          Start Here
-        </h1>
-        <p className="text-xl text-gray-700 text-center max-w-3xl mx-auto">
-          New to The Book of Sebastian? Begin your journey with the opening verse.
-        </p>
+      <section className="max-w-3xl mx-auto px-6 py-12 md:py-16">
+        <div className="text-center">
+          <h1 className="font-title text-5xl md:text-7xl font-bold text-black mb-6 leading-[1.1] tracking-tight uppercase">
+            Start Here
+          </h1>
+          <p className="font-serif text-xl md:text-2xl text-dark-gray leading-relaxed italic max-w-2xl mx-auto">
+            New to the book. Here is how to read it, and where to begin.
+          </p>
+          <OrnamentalDivider />
+        </div>
       </section>
 
-      {/* Reading Order */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Recommended Reading Order
-          </h2>
+      {/* How to Read */}
+      <section className="border-t border-b border-silver bg-white py-20">
+        <div className="max-w-2xl mx-auto px-6">
+          <SectionHeader>How to Read It</SectionHeader>
 
-          <div className="space-y-6 mb-10">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                <span className="text-gray-900 font-bold text-xl">1</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Start with the Opening Verse</h3>
-                <p className="text-gray-700">
-                  Chapter 1 sets the foundation—the prophecy, the cancer, the miracle, and the mission.
-                  Everything begins here.
+          <div className="space-y-8 mt-8">
+            <div className="flex items-start gap-5">
+              <span className="font-title text-3xl text-royal-blue font-bold leading-none">
+                I
+              </span>
+              <div className="text-left">
+                <h3 className="font-title text-xl font-semibold text-black mb-1">
+                  Begin at the first chapter
+                </h3>
+                <p className="font-serif text-dark-gray leading-relaxed">
+                  The book is built as a doorway, not a timeline. The opening
+                  chapter sets the one fact everything else rests on: I see the
+                  world twice.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                <span className="text-gray-900 font-bold text-xl">2</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Follow the Weekly Verses</h3>
-                <p className="text-gray-700">
-                  Every Sunday, a new chapter arrives. Subscribe to receive each verse in your inbox and follow
-                  the journey in real-time.
+            <div className="flex items-start gap-5">
+              <span className="font-title text-3xl text-royal-blue font-bold leading-none">
+                II
+              </span>
+              <div className="text-left">
+                <h3 className="font-title text-xl font-semibold text-black mb-1">
+                  Read through the three movements
+                </h3>
+                <p className="font-serif text-dark-gray leading-relaxed">
+                  The Seen World, the World That Ended, the Made World. Each
+                  chapter is short. Read one, or read them in a sitting.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                <span className="text-gray-900 font-bold text-xl">3</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Engage with the Community</h3>
-                <p className="text-gray-700">
-                  Join the discussion in the comments, share your own journey, and connect with others who
-                  are building from nothing.
+            <div className="flex items-start gap-5">
+              <span className="font-title text-3xl text-royal-blue font-bold leading-none">
+                III
+              </span>
+              <div className="text-left">
+                <h3 className="font-title text-xl font-semibold text-black mb-1">
+                  Follow as it&apos;s written
+                </h3>
+                <p className="font-serif text-dark-gray leading-relaxed">
+                  New chapters arrive as the work is finished. Subscribe and
+                  each one comes to your inbox.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="text-center">
-            <CTAButton
-              href="https://sebastiangerhardt.substack.com"
-              variant="primary"
-              external={true}
-              utmCampaign="start_page"
-            >
-              Read Chapter 1: The Opening Verse
+          <div className="text-center mt-12">
+            <CTAButton href="/chapters" variant="primary">
+              Go to the Chapters
             </CTAButton>
           </div>
         </div>
       </section>
 
-      {/* What to Expect */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-          What You'll Find Here
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg p-6 shadow-md">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Raw Accountability</h3>
-            <p className="text-gray-700">
-              No filtered perfection. Real wins, real failures, real growth documented in real-time.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg p-6 shadow-md">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Weekly Verses</h3>
-            <p className="text-gray-700">
-              Every Sunday, a new chapter. Consistent documentation of the journey from guest room to empire.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg p-6 shadow-md">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Cancer Survival Story</h3>
-            <p className="text-gray-700">
-              The medical miracle that started it all—and what I'm doing with the second chance.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg p-6 shadow-md">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Empire Building</h3>
-            <p className="text-gray-700">
-              Insurance as foundation, magic as mission. Watch the business grow from $77K debt to freedom.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg p-6 shadow-md">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Foundation Principles</h3>
-            <p className="text-gray-700">
-              Radical accountability using Rusty's Mindset Upgrade System—the framework guiding the journey.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg p-6 shadow-md">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Community & Connection</h3>
-            <p className="text-gray-700">
-              Join survivors, entrepreneurs, and rebuilders following along and sharing their own journeys.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section className="bg-gray-900 text-white py-20">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-12 text-center">
-            Frequently Asked Questions
+      <section className="border-t border-silver bg-black text-white py-24">
+        <div className="max-w-2xl mx-auto px-6">
+          <h2 className="font-title text-center text-sm md:text-base uppercase tracking-biblical text-silver mb-12">
+            — • Questions • —
           </h2>
 
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-bold text-gold mb-3">How often do you publish?</h3>
-              <p className="text-gray-300">
-                Every Sunday, a new verse arrives. Consistent, weekly documentation of the journey.
+              <h3 className="font-title text-xl font-semibold text-white mb-2">
+                How often do new chapters come?
+              </h3>
+              <p className="font-serif text-silver leading-relaxed">
+                As the work is finished. No schedule, no filler. When a chapter
+                is true and done, it goes up.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-gold mb-3">Is it free?</h3>
-              <p className="text-gray-300">
-                Yes. All verses are published free on Substack. Subscribe to get each chapter delivered to your
-                inbox every Sunday.
+              <h3 className="font-title text-xl font-semibold text-white mb-2">
+                Is it free?
+              </h3>
+              <p className="font-serif text-silver leading-relaxed">
+                Yes. The chapters are free to read here. Subscribe if you want
+                each new one delivered by email.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-gold mb-3">What's the story about?</h3>
-              <p className="text-gray-300">
-                The Book of Sebastian chronicles the journey from brain cancer survivor to empire builder.
-                It's about surviving the impossible, escaping narcissistic abuse, and building from nothing with
-                radical accountability. Every verse is real-time documentation—no highlight reel, just truth.
+              <h3 className="font-title text-xl font-semibold text-white mb-2">
+                What is it about?
+              </h3>
+              <p className="font-serif text-silver leading-relaxed">
+                A magician who was diagnosed with Grade 4 pineoblastoma at
+                twenty-two, survived, and rebuilt a life. The survival, the
+                rebuild, and the doorway between the two.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-gold mb-3">Can I start from any chapter?</h3>
-              <p className="text-gray-300">
-                While each verse stands alone, the story builds on itself. Start with Chapter 1 (The Opening Verse)
-                to get the full context, then follow along weekly.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-gold mb-3">Who is this for?</h3>
-              <p className="text-gray-300">
-                Cancer survivors honoring their second chance. Entrepreneurs building from debt. Anyone rebuilding
-                after narcissistic abuse or soul-crushing defeat. People who refuse to waste their miracles.
+              <h3 className="font-title text-xl font-semibold text-white mb-2">
+                Can I start anywhere?
+              </h3>
+              <p className="font-serif text-silver leading-relaxed">
+                Each chapter stands on its own. But the first one frames the
+                rest, so start there if you can.
               </p>
             </div>
           </div>
@@ -198,21 +153,26 @@ export default function StartHere() {
       </section>
 
       {/* Subscribe CTA */}
-      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      <section className="max-w-3xl mx-auto px-6 py-20 text-center">
+        <h2 className="font-title text-3xl md:text-4xl font-semibold text-black mb-6 tracking-wide">
           Ready to Begin?
         </h2>
-        <p className="text-xl text-gray-700 mb-8">
-          Subscribe to receive each verse every Sunday. Join the journey.
+        <p className="font-serif text-xl text-dark-gray mb-8 max-w-xl mx-auto">
+          Start reading, or get new chapters by email as they&apos;re finished.
         </p>
-        <CTAButton
-          href="https://sebastiangerhardt.substack.com/subscribe"
-          variant="primary"
-          external={true}
-          utmCampaign="start_page_subscribe"
-        >
-          Subscribe for Weekly Verses
-        </CTAButton>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <CTAButton href="/chapters" variant="primary">
+            Start Reading
+          </CTAButton>
+          <CTAButton
+            href="https://sebastiangerhardt.substack.com/subscribe"
+            variant="secondary"
+            external={true}
+            utmCampaign="start_page_subscribe"
+          >
+            Get New Chapters by Email
+          </CTAButton>
+        </div>
       </section>
     </div>
   );

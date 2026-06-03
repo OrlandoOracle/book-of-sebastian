@@ -1,156 +1,217 @@
-import { Metadata } from 'next';
-import CTAButton from '@/components/CTAButton';
+import { Metadata } from "next";
+import CTAButton from "@/components/CTAButton";
+import SectionHeader from "@/components/SectionHeader";
+import OrnamentalDivider from "@/components/OrnamentalDivider";
 
 export const metadata: Metadata = {
-  title: 'About | The Book of Sebastian',
-  description: 'The story behind the testament. Discover the journey and purpose.',
+  title: "About | The Book of Sebastian",
+  description:
+    "A magician and brain cancer survivor writing the doorway between the life that ended and the life that came after.",
   openGraph: {
-    title: 'About | The Book of Sebastian',
-    description: 'The story behind the testament. Discover the journey and purpose.',
-    url: 'https://bookofsebastian.com/about',
-    siteName: 'The Book of Sebastian',
-    type: 'website',
+    title: "About | The Book of Sebastian",
+    description:
+      "A magician and brain cancer survivor writing the doorway between the life that ended and the life that came after.",
+    url: "https://bookofsebastian.com/about",
+    siteName: "The Book of Sebastian",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'About | The Book of Sebastian',
-    description: 'The story behind the testament. Discover the journey and purpose.',
+    card: "summary_large_image",
+    title: "About | The Book of Sebastian",
+    description:
+      "A magician and brain cancer survivor writing the doorway between the life that ended and the life that came after.",
   },
   alternates: {
-    canonical: 'https://bookofsebastian.com/about',
+    canonical: "https://bookofsebastian.com/about",
   },
 };
 
 export default function About() {
   return (
-    <div className="bg-cream">
+    <div>
       {/* Hero */}
-      <section className="max-w-4xl mx-auto px-6 py-20">
-        <h1 className="font-serif text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-center">
-          About the Testament
-        </h1>
-        <p className="text-xl text-gray-700 text-center max-w-3xl mx-auto">
-          The story behind The Book of Sebastian and the mission to document radical transformation in real-time.
-        </p>
+      <section className="max-w-3xl mx-auto px-6 py-12 md:py-16">
+        <div className="text-center">
+          <h1 className="font-title text-5xl md:text-7xl font-bold text-black mb-6 leading-[1.1] tracking-tight uppercase">
+            About
+          </h1>
+          <p className="font-serif text-xl md:text-2xl text-dark-gray leading-relaxed italic max-w-2xl mx-auto">
+            Magician. Cancer survivor. Writing the doorway between the life that
+            ended and the life that came after.
+          </p>
+          <OrnamentalDivider />
+        </div>
       </section>
 
-      {/* The Mission */}
-      <section className="bg-white py-20">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-            The Mission
-          </h2>
-          <div className="prose prose-lg text-gray-700 leading-relaxed space-y-6">
-            <p>
-              <strong className="text-gold">This testimony is for those who refuse to waste their miracles.</strong>
+      {/* Two Worlds */}
+      <section className="border-t border-b border-silver bg-white py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <SectionHeader>Two Worlds</SectionHeader>
+          <div className="text-center space-y-6 max-w-2xl mx-auto">
+            <p className="drop-cap font-serif text-lg md:text-xl text-black leading-relaxed mx-auto">
+              I see the world twice. That is not a way of speaking. It is my
+              eyes. Most of the time my brain lays the two pictures over each
+              other and I see one world, like everyone else. When I am tired, or
+              when something matters, they pull apart.
             </p>
-            <p>
-              For cancer survivors who were given a second chance and want to make it count.
-              For entrepreneurs building from nothing, carrying debt and doubt but moving forward anyway.
-              For people rebuilding their lives after narcissistic abuse, domestic violence, or any soul-crushing defeat.
+            <p className="font-serif text-lg md:text-xl text-black leading-relaxed mx-auto">
+              I grew up doing magic. I started at thirteen and never stopped —
+              more than twenty years of standing in front of strangers and, for
+              a few seconds and with their permission, making the world look
+              more permeable than it is. That was the first world. The trick is
+              the doorway. The wonder is what walks through.
             </p>
-            <p>
-              Every Sunday, you'll find a new verse—a real-time chapter in the journey from brain cancer survivor
-              to empire builder. No highlight reel. No filtered perfection. Just radical accountability, documented
-              as it happens.
-            </p>
-            <p className="text-xl font-semibold text-gray-900">
-              This is about honoring those who didn't survive by refusing to waste the life they would have wanted.
+            <p className="font-serif text-lg md:text-xl text-black leading-relaxed mx-auto">
+              The second world arrived in 2018. I was twenty-two. The diagnosis
+              was Grade 4 pineoblastoma — rare, aggressive brain cancer. I was
+              uninsured.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The Author */}
-      <section className="max-w-4xl mx-auto px-6 py-20">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-          The Author
-        </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-6">
-          <p>
-            At twelve years old, I asked the universe for a story worth telling. I wanted to matter. I wanted
-            my life to mean something beyond the ordinary.
+      {/* What Cancer Did */}
+      <section className="max-w-3xl mx-auto px-6 py-20">
+        <SectionHeader>What It Cost</SectionHeader>
+        <div className="text-center space-y-6 max-w-2xl mx-auto">
+          <p className="font-serif text-lg md:text-xl text-black leading-relaxed mx-auto">
+            I do not romanticize it. Cancer is not a teacher. It is not a gift.
+            It does not come into your life for a reason. What it does is end
+            the version of you that thought time was a thing you owned.
           </p>
-          <p>
-            At twenty-two, the universe answered with brain cancer. Grade II astrocytoma. The doctors gave me
-            statistics that felt like a death sentence. But I survived. Against the odds, through surgeries and
-            treatments and miracles I still can't fully explain—I survived.
+          <p className="font-serif text-lg md:text-xl text-black leading-relaxed mx-auto">
+            I survived. Surgery. Radiation. A long recovery, and a body that
+            kept the marks of it — the eye that does not track quite right, the
+            deliberateness with which I now do ordinary things. I also walked
+            out with more than half a million dollars in medical debt. At
+            twenty-two, the two doors in front of me were dying and bankruptcy.
           </p>
-          <p>
-            Seven years later, I was medically certified as a miracle. The tumor was gone. I had beaten cancer.
-            But I hadn't beaten my own demons.
+          <p className="font-serif text-lg md:text-xl text-black leading-relaxed mx-auto">
+            A Florida program covered me retroactively because I had been
+            disabled before I turned twenty-three. The debt was wiped out. I
+            made it to the other side. That is the whole reason I sell insurance
+            now. I know what it is to face the worst day of your life and find
+            that nobody made sure you were covered.
           </p>
-          <p>
-            I spent four years in a narcissistic marriage that slowly eroded everything I had fought to keep alive.
-            Until the day I packed my car, drove 992 miles to my brother's guest room in Las Vegas, and started
-            over with $77K in debt and nothing but determination.
+        </div>
+      </section>
+
+      {/* The Rebuild */}
+      <section className="border-t border-b border-silver bg-white py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <SectionHeader>The Rebuild</SectionHeader>
+          <div className="text-center space-y-6 max-w-2xl mx-auto">
+            <p className="font-serif text-lg md:text-xl text-black leading-relaxed mx-auto">
+              Surviving was the first ending. There was a second one. Four years
+              in a marriage that nearly erased me, and then a car packed in a
+              hurry, almost a thousand miles driven to a guest room, and a
+              start-over with seventy-seven thousand dollars of debt and not
+              much else.
+            </p>
+            <p className="font-serif text-lg md:text-xl text-black leading-relaxed mx-auto">
+              What I did next is the unglamorous part, and the part that
+              mattered. I built a system. Not routines — an actual system.
+              Software, notebooks, calendars wired together, a way to live with
+              double vision and finite energy and two careers and one body and
+              still keep the promises I made. I built it for myself. The
+              alternative was to keep losing things I had promised not to lose.
+            </p>
+            <p className="font-serif text-lg md:text-xl text-black leading-relaxed mx-auto">
+              It took years. It is still taking years. It works.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What This Is For */}
+      <section className="max-w-3xl mx-auto px-6 py-20">
+        <SectionHeader>What This Is For</SectionHeader>
+        <div className="text-center space-y-6 max-w-2xl mx-auto">
+          <p className="font-serif text-lg md:text-xl text-black leading-relaxed mx-auto">
+            I am not a guru. I run an insurance practice and a magic career and
+            a small company called Orlando Oracle, and on most days I am tired
+            and behind on sleep. I keep meeting people who are inside the
+            version of the story I was in — who have survived something, or are
+            surviving it, and have realized the old life does not fit and the
+            new one has not been built yet.
           </p>
-          <p>
-            Now I'm building empire. Using insurance as my foundation—the industry that saved my life when I was
-            sick. Using magic (the real kind: manifestation, energy work, faith) as my mission. Guided by The
-            Foundation's radical accountability system created by Rusty.
-          </p>
-          <p className="text-xl font-semibold text-gray-900">
-            This is my testimony. Every Sunday, a new verse. Every chapter, proof that transformation is possible.
+          <p className="font-serif text-xl md:text-2xl text-royal-blue font-semibold italic mt-8 mx-auto">
+            I would like to be useful to people walking through the door. That
+            is what this is for.
           </p>
         </div>
 
-        <div className="mt-12 p-8 bg-gray-100 rounded-lg">
-          <h3 className="font-serif text-2xl font-bold text-gray-900 mb-4">Photo Placeholder</h3>
-          <p className="text-gray-600 italic">Author photo will be added here</p>
-        </div>
-
-        <div className="mt-8">
-          <h3 className="font-serif text-2xl font-bold text-gray-900 mb-4">Contact</h3>
-          <p className="text-gray-700">
-            <a href="mailto:sebastian@bookofsebastian.com" className="text-gold hover:underline font-semibold">
+        <div className="mt-12 text-center">
+          <h3 className="font-title text-2xl font-semibold text-black mb-4 tracking-wide">
+            Contact
+          </h3>
+          <p className="font-serif text-dark-gray">
+            <a
+              href="mailto:sebastian@bookofsebastian.com"
+              className="text-royal-blue hover:underline font-medium"
+            >
               sebastian@bookofsebastian.com
             </a>
           </p>
         </div>
       </section>
 
-      {/* The Journey So Far */}
-      <section className="bg-gray-900 text-white py-20">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-12 text-center">
-            The Journey So Far
+      {/* Timeline */}
+      <section className="border-t border-silver bg-black text-white py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-title text-center text-sm md:text-base uppercase tracking-biblical text-silver mb-12">
+            — • The Shape of It • —
           </h2>
 
-          <div className="space-y-8">
-            <div className="border-l-4 border-gold pl-6 py-2">
-              <h3 className="text-2xl font-bold text-gold mb-2">Age 12: The Prophecy</h3>
-              <p className="text-gray-300">
-                Asked the universe for a story worth telling. Wanted a life that mattered.
+          <div className="space-y-8 max-w-2xl mx-auto">
+            <div className="border-l-2 border-royal-blue pl-6 py-1">
+              <h3 className="font-title text-xl font-semibold text-white mb-1">
+                Age 13 — The First Move
+              </h3>
+              <p className="font-serif text-silver leading-relaxed">
+                A boy with a shaking voice crosses a room at a magic festival
+                and asks to show a stranger a card move. The first world opens.
               </p>
             </div>
 
-            <div className="border-l-4 border-gold pl-6 py-2">
-              <h3 className="text-2xl font-bold text-gold mb-2">Age 22: Brain Cancer Diagnosis</h3>
-              <p className="text-gray-300">
-                Grade II astrocytoma. The universe delivered the story—just not the one I expected.
+            <div className="border-l-2 border-royal-blue pl-6 py-1">
+              <h3 className="font-title text-xl font-semibold text-white mb-1">
+                2018, Age 22 — The Diagnosis
+              </h3>
+              <p className="font-serif text-silver leading-relaxed">
+                Grade 4 pineoblastoma. Uninsured. The version of me that thought
+                time was mine ends here.
               </p>
             </div>
 
-            <div className="border-l-4 border-gold pl-6 py-2">
-              <h3 className="text-2xl font-bold text-gold mb-2">Year 7: Medically Certified Miracle</h3>
-              <p className="text-gray-300">
-                Cancer-free. Against all odds. A second chance at life.
+            <div className="border-l-2 border-royal-blue pl-6 py-1">
+              <h3 className="font-title text-xl font-semibold text-white mb-1">
+                The Other Side
+              </h3>
+              <p className="font-serif text-silver leading-relaxed">
+                Surgery, radiation, recovery. Half a million in debt, wiped out
+                by retroactive coverage. I made it across, and learned why
+                coverage is not abstract.
               </p>
             </div>
 
-            <div className="border-l-4 border-gold pl-6 py-2">
-              <h3 className="text-2xl font-bold text-gold mb-2">Age 29: The Rebuild Begins</h3>
-              <p className="text-gray-300">
-                Escaped narcissistic marriage. 992 miles to freedom. $77K in debt. Guest room to empire.
+            <div className="border-l-2 border-royal-blue pl-6 py-1">
+              <h3 className="font-title text-xl font-semibold text-white mb-1">
+                The Second Ending
+              </h3>
+              <p className="font-serif text-silver leading-relaxed">
+                Out of a marriage that nearly erased me. Almost a thousand miles
+                to a guest room. Seventy-seven thousand in debt. A start-over.
               </p>
             </div>
 
-            <div className="border-l-4 border-gold pl-6 py-2">
-              <h3 className="text-2xl font-bold text-gold mb-2">Present: Building Empire</h3>
-              <p className="text-gray-300">
-                Insurance as foundation. Magic as mission. Radical accountability as the path.
-                Every Sunday, a new verse.
+            <div className="border-l-2 border-royal-blue pl-6 py-1">
+              <h3 className="font-title text-xl font-semibold text-white mb-1">
+                Now — Orlando
+              </h3>
+              <p className="font-serif text-silver leading-relaxed">
+                Insurance, magic, and the system I built to live a life that
+                fits. Writing it down, a chapter at a time. I am not in a hurry.
               </p>
             </div>
           </div>
@@ -158,27 +219,24 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Follow the Journey
+      <section className="max-w-3xl mx-auto px-6 py-20 text-center">
+        <h2 className="font-title text-3xl md:text-4xl font-semibold text-black mb-6 tracking-wide">
+          Read the Book
         </h2>
-        <p className="text-xl text-gray-700 mb-8">
-          New verse every Sunday. Real-time documentation of transformation.
+        <p className="font-serif text-xl text-dark-gray mb-8 max-w-xl mx-auto">
+          The memoir, chapter by chapter. New chapters as the work is finished.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <CTAButton href="/chapters" variant="primary">
+            Start Reading
+          </CTAButton>
           <CTAButton
             href="https://sebastiangerhardt.substack.com/subscribe"
-            variant="primary"
+            variant="secondary"
             external={true}
             utmCampaign="about_page"
           >
-            Subscribe Now
-          </CTAButton>
-          <CTAButton
-            href="/start"
-            variant="secondary"
-          >
-            Start from the Beginning
+            Get New Chapters by Email
           </CTAButton>
         </div>
       </section>
