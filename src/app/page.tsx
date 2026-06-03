@@ -25,34 +25,84 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const GALLERY = [
+  {
+    src: "/photos/perform.jpg",
+    alt: "Sebastian mid-performance, telling a story",
+    caption: "On stage",
+  },
+  {
+    src: "/photos/portrait-coin.jpg",
+    alt: "Sebastian holding a coin, direct gaze",
+    caption: "The work in the hands",
+  },
+  {
+    src: "/photos/two-shadows.jpg",
+    alt: "Sebastian with two shadows — one holding a martini, one holding cards",
+    caption: "Two worlds",
+  },
+];
+
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Hero */}
-      <section className="px-6 pt-24 pb-20 md:pt-32 md:pb-28 lg:pt-40 lg:pb-32">
-        <div className="reveal mx-auto max-w-3xl text-center">
-          <p className="eyebrow mb-9">A Testament in Two Worlds</p>
-          <h1 className="font-title text-6xl md:text-8xl font-bold leading-[1.04] tracking-tight">
-            The Book of
-            <br />
-            <span className="gold-text">Sebastian</span>
-          </h1>
-          <p className="mx-auto mt-9 max-w-xl font-serif text-xl md:text-2xl italic leading-relaxed text-ink-soft">
-            A magician. A brain cancer survivor. The doorway between the life
-            that ended and the life that came after.
-          </p>
-          <div className="mt-14 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <CTAButton href="/chapters" variant="primary">
-              Start Reading
-            </CTAButton>
-            <CTAButton
-              href="https://sebastiangerhardt.substack.com/subscribe"
-              variant="secondary"
-              external
-              utmCampaign="hero_subscribe"
-            >
-              Get New Chapters
-            </CTAButton>
+      {/* Cinematic hero */}
+      <section
+        style={{
+          position: "relative",
+          width: "100%",
+          minHeight: "88vh",
+          display: "flex",
+          alignItems: "flex-end",
+          justifyContent: "center",
+          overflow: "hidden",
+        }}
+      >
+        <img
+          src="/photos/hero-library.jpg"
+          alt="Sebastian in a dark library, holding his own head, a book titled Art and Magic where his face should be"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, rgba(10,10,15,0.45) 0%, rgba(10,10,15,0.25) 32%, rgba(10,10,15,0.78) 78%, #0a0a0f 100%)",
+          }}
+        />
+        <div className="reveal" style={{ position: "relative", zIndex: 1 }}>
+          <div className="mx-auto max-w-3xl px-6 pb-16 text-center md:pb-24">
+            <p className="eyebrow mb-7">A Testament in Two Worlds</p>
+            <h1 className="font-title text-6xl md:text-8xl font-bold leading-[1.04] tracking-tight">
+              The Book of
+              <br />
+              <span className="gold-text">Sebastian</span>
+            </h1>
+            <p className="mx-auto mt-7 max-w-xl font-serif text-xl md:text-2xl italic leading-relaxed text-ink">
+              A magician. A brain cancer survivor. The doorway between the life
+              that ended and the life that came after.
+            </p>
+            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <CTAButton href="/chapters" variant="primary">
+                Start Reading
+              </CTAButton>
+              <CTAButton
+                href="https://sebastiangerhardt.substack.com/subscribe"
+                variant="secondary"
+                external
+                utmCampaign="hero_subscribe"
+              >
+                Get New Chapters
+              </CTAButton>
+            </div>
           </div>
         </div>
       </section>
@@ -60,7 +110,6 @@ export default function Home() {
       {/* Bento */}
       <section className="px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 md:auto-rows-[248px]">
-          {/* Dominant: read the book */}
           <Link
             href="/chapters"
             className="oracle-card hover-lift group flex flex-col justify-center gap-7 p-12 text-left md:col-span-2 md:row-span-2"
@@ -80,7 +129,6 @@ export default function Home() {
             </span>
           </Link>
 
-          {/* About */}
           <Link
             href="/about"
             className="oracle-card oracle-card--raised hover-lift flex flex-col justify-center gap-3 p-8 text-left"
@@ -91,7 +139,6 @@ export default function Home() {
             </p>
           </Link>
 
-          {/* Subscribe */}
           <a
             href="https://sebastiangerhardt.substack.com/subscribe?utm_source=website&utm_medium=bento&utm_campaign=home"
             className="oracle-card oracle-card--raised hover-lift flex flex-col justify-center gap-3 p-8 text-left"
@@ -101,6 +148,37 @@ export default function Home() {
               New chapters by email, as the work is finished.
             </p>
           </a>
+        </div>
+      </section>
+
+      {/* Restrained photo band */}
+      <section className="px-5 py-8 md:px-8 md:py-12">
+        <div className="mx-auto max-w-5xl">
+          <p className="eyebrow mb-8 text-center">The Two Worlds</p>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {GALLERY.map((g) => (
+              <figure
+                key={g.src}
+                className="hover-lift oracle-card overflow-hidden p-0"
+              >
+                <img
+                  src={g.src}
+                  alt={g.alt}
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "320px",
+                    objectFit: "cover",
+                    objectPosition: "center top",
+                    display: "block",
+                  }}
+                />
+                <figcaption className="px-5 py-4 text-center font-sans text-xs uppercase tracking-[0.14em] text-ink-soft">
+                  {g.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
