@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CTAButton from "@/components/CTAButton";
+import SubscribeModal from "@/components/SubscribeModal";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -47,72 +48,61 @@ const GALLERY2 = [
   {
     src: "/photos/live-fringe.jpg",
     alt: "Sebastian performing his show The Other Side on stage in a leather jacket",
-    caption: "The Other Side — on stage",
+    caption: "The Other Side — live",
     pos: "center",
-  },
-  {
-    src: "/photos/closeup-mall.jpg",
-    alt: "Sebastian in a fedora performing close-up magic for a child and onlookers",
-    caption: "Close-up, in the wild",
-    pos: "left center",
   },
 ];
 
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Hero — image on top (head + book visible), title beneath (text off the subject) */}
-      <section className="w-full">
-        <div style={{ position: "relative", width: "100%" }}>
+      {/* Hero — split: text on dark canvas (left) | full uncropped image (right). No overlap, no scrim. */}
+      <section className="hero2">
+        <div className="hero2__text reveal">
+          <div style={{ maxWidth: "34rem" }}>
+            <p className="eyebrow" style={{ margin: "0 0 1.3rem" }}>
+              A Testament in Two Worlds
+            </p>
+            <h1
+              className="font-title font-bold"
+              style={{
+                margin: 0,
+                fontSize: "clamp(3rem, 5.8vw, 5.6rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.01em",
+                color: "#f4f3ef",
+              }}
+            >
+              The Book of <span className="gold-text">Sebastian</span>
+            </h1>
+            <p
+              className="font-serif italic text-ink"
+              style={{
+                margin: "1.4rem 0 0",
+                fontSize: "clamp(1.18rem, 2.2vw, 1.6rem)",
+                lineHeight: 1.55,
+              }}
+            >
+              A magician, a mentalist, a cancer survivor, and an insurance
+              executive walk into a timeline…
+            </p>
+            <div
+              className="flex flex-col sm:flex-row gap-4"
+              style={{ marginTop: "2.2rem" }}
+            >
+              <CTAButton href="/chapters" variant="primary">
+                Start Reading
+              </CTAButton>
+              <SubscribeModal label="Get New Chapters" variant="secondary" />
+            </div>
+          </div>
+        </div>
+        <div className="hero2__imgwrap">
           <img
+            className="hero2__img"
             src="/photos/hero-library.jpg"
             alt="Sebastian in a dark library, holding his own head, a book titled Art and Magic where his face should be"
-            style={{
-              width: "100%",
-              height: "clamp(420px, 70vh, 820px)",
-              objectFit: "cover",
-              objectPosition: "center top",
-              display: "block",
-            }}
           />
-          <div
-            style={{
-              position: "absolute",
-              insetInline: 0,
-              bottom: 0,
-              height: "42%",
-              background: "linear-gradient(180deg, transparent, #0a0a0f)",
-              pointerEvents: "none",
-            }}
-          />
-        </div>
-        <div
-          className="reveal mx-auto max-w-3xl px-6 pb-16 text-center md:pb-24"
-          style={{ marginTop: "-3rem", position: "relative", zIndex: 1 }}
-        >
-          <p className="eyebrow mb-7">A Testament in Two Worlds</p>
-          <h1 className="font-title text-6xl md:text-8xl font-bold leading-[1.04] tracking-tight">
-            The Book of
-            <br />
-            <span className="gold-text">Sebastian</span>
-          </h1>
-          <p className="mx-auto mt-7 max-w-xl font-serif text-xl md:text-2xl italic leading-relaxed text-ink-soft">
-            A magician. A brain cancer survivor. The doorway between the life
-            that ended and the life that came after.
-          </p>
-          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <CTAButton href="/chapters" variant="primary">
-              Start Reading
-            </CTAButton>
-            <CTAButton
-              href="https://sebastiangerhardt.substack.com/subscribe"
-              variant="secondary"
-              external
-              utmCampaign="hero_subscribe"
-            >
-              Get New Chapters
-            </CTAButton>
-          </div>
         </div>
       </section>
 
@@ -182,9 +172,6 @@ export default function Home() {
                     display: "block",
                   }}
                 />
-                <figcaption className="px-5 py-4 text-center font-sans text-xs uppercase tracking-[0.14em] text-ink-soft">
-                  {g.caption}
-                </figcaption>
               </figure>
             ))}
           </div>
@@ -195,7 +182,7 @@ export default function Home() {
       <section className="px-5 pb-12 md:px-8 md:pb-16">
         <div className="mx-auto max-w-3xl">
           <p className="eyebrow mb-8 text-center">Out in the World</p>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4">
             {GALLERY2.map((g) => (
               <figure
                 key={g.src}
@@ -207,7 +194,7 @@ export default function Home() {
                   loading="lazy"
                   style={{
                     width: "100%",
-                    height: "300px",
+                    height: "440px",
                     objectFit: "cover",
                     objectPosition: g.pos,
                     display: "block",
