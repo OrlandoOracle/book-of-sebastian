@@ -31,7 +31,7 @@ export default function ChaptersIndex() {
 
   return (
     <div>
-      <section className="max-w-3xl mx-auto px-6 py-12 md:py-16">
+      <section className="max-w-3xl mx-auto sec-hero">
         <div className="text-center">
           <h1 className="font-title text-5xl md:text-7xl font-bold text-black mb-6 leading-[1.1] tracking-tight uppercase">
             The Book
@@ -46,7 +46,7 @@ export default function ChaptersIndex() {
         </div>
       </section>
 
-      <section className="bg-off-white py-12">
+      <section className="bg-off-white sec">
         <div className={styles.wrap}>
           {PART_ORDER.map((part) => {
             const inPart = publishedChapters.filter((c) => c.part === part);

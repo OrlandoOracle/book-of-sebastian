@@ -3,81 +3,42 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/chapters", label: "The Book" },
+  { href: "/start", label: "Start" },
+  { href: "/subscribe", label: "Subscribe" },
+  { href: "/connect", label: "Connect" },
+];
+
 export default function Header() {
   const pathname = usePathname();
-
-  const isActive = (path: string) => pathname === path;
+  const active = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="border-b border-silver bg-white">
-      <nav className="max-w-4xl mx-auto px-6 py-6">
-        <Link href="/" className="block text-center mb-6">
-          <h1 className="font-title text-3xl md:text-4xl font-semibold text-black tracking-wide">
-            The Book of Sebastian
-          </h1>
+    <header className="glass-nav sticky top-0 z-50 w-full">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-3.5 md:px-8">
+        <Link
+          href="/"
+          className="font-title text-lg md:text-xl font-semibold tracking-wide text-ink whitespace-nowrap"
+        >
+          The Book of <span className="gold-text">Sebastian</span>
         </Link>
 
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-sm uppercase tracking-wide">
-          <Link
-            href="/"
-            className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              isActive("/")
-                ? "text-royal-blue border-b-2 border-royal-blue"
-                : "text-dark-gray hover:text-royal-blue"
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              isActive("/about")
-                ? "text-royal-blue border-b-2 border-royal-blue"
-                : "text-dark-gray hover:text-royal-blue"
-            }`}
-          >
-            About
-          </Link>
-          <Link
-            href="/chapters"
-            className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              pathname.startsWith("/chapters")
-                ? "text-royal-blue border-b-2 border-royal-blue"
-                : "text-dark-gray hover:text-royal-blue"
-            }`}
-          >
-            The Book
-          </Link>
-          <Link
-            href="/start"
-            className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              isActive("/start")
-                ? "text-royal-blue border-b-2 border-royal-blue"
-                : "text-dark-gray hover:text-royal-blue"
-            }`}
-          >
-            Start Here
-          </Link>
-          <Link
-            href="/subscribe"
-            className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              isActive("/subscribe")
-                ? "text-royal-blue border-b-2 border-royal-blue"
-                : "text-dark-gray hover:text-royal-blue"
-            }`}
-          >
-            Subscribe
-          </Link>
-          <Link
-            href="/connect"
-            className={`font-serif transition-colors duration-300 font-medium px-2 py-1 ${
-              isActive("/connect")
-                ? "text-royal-blue border-b-2 border-royal-blue"
-                : "text-dark-gray hover:text-royal-blue"
-            }`}
-          >
-            Connect
-          </Link>
+        <div className="flex flex-wrap items-center justify-end gap-x-5 gap-y-1 font-sans text-[0.82rem] uppercase tracking-[0.12em]">
+          {LINKS.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className={`transition-colors duration-200 ${
+                active(l.href) ? "text-gold" : "text-ink-soft hover:text-gold"
+              }`}
+            >
+              {l.label}
+            </Link>
+          ))}
         </div>
       </nav>
     </header>

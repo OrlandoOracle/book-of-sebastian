@@ -1,217 +1,80 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
+import CTAButton from "@/components/CTAButton";
 
 export const metadata: Metadata = {
-  title: 'Connect | The Book of Sebastian',
-  description: 'Join the conversation. Connect across platforms and communities.',
+  title: "Connect | The Book of Sebastian",
+  description: "Follow the book and get in touch.",
   openGraph: {
-    title: 'Connect | The Book of Sebastian',
-    description: 'Join the conversation. Connect across platforms and communities.',
-    url: 'https://bookofsebastian.com/connect',
-    siteName: 'The Book of Sebastian',
-    type: 'website',
+    title: "Connect | The Book of Sebastian",
+    description: "Follow the book and get in touch.",
+    url: "https://bookofsebastian.com/connect",
+    siteName: "The Book of Sebastian",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Connect | The Book of Sebastian',
-    description: 'Join the conversation. Connect across platforms and communities.',
+    card: "summary_large_image",
+    title: "Connect | The Book of Sebastian",
+    description: "Follow the book and get in touch.",
   },
-  alternates: {
-    canonical: 'https://bookofsebastian.com/connect',
-  },
+  alternates: { canonical: "https://bookofsebastian.com/connect" },
 };
 
 export default function Connect() {
   return (
-    <div className="bg-cream">
-      {/* Hero */}
-      <section className="max-w-4xl mx-auto px-6 py-20">
-        <h1 className="font-serif text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-center">
-          Connect
-        </h1>
-        <p className="text-xl text-gray-700 text-center max-w-3xl mx-auto">
-          Follow the journey across platforms and get in touch.
-        </p>
+    <div className="w-full">
+      <section className="sec-hero">
+        <div className="reveal mx-auto max-w-2xl text-center">
+          <p className="eyebrow mb-6">Connect</p>
+          <h1 className="font-title text-5xl md:text-7xl font-bold tracking-tight">
+            Follow the book.
+          </h1>
+          <p className="mx-auto mt-6 max-w-xl font-serif text-xl italic text-ink-soft">
+            New chapters by email, and a direct line for anything else.
+          </p>
+        </div>
       </section>
 
-      {/* Social Links */}
-      <section className="max-w-4xl mx-auto px-6 pb-12">
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Substack */}
+      <section className="sec">
+        <div className="mx-auto grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2">
           <a
             href="https://sebastiangerhardt.substack.com?utm_source=website&utm_medium=connect&utm_campaign=social"
-            className="bg-white border-2 border-silver rounded-lg p-8 hover:border-royal-blue transition-all group"
+            className="oracle-card hover-lift p-8 text-left"
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-royal-blue transition-colors">
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 className="font-title text-2xl font-semibold text-black">Substack</h3>
-                <p className="text-dark-gray">Primary Platform</p>
-              </div>
-            </div>
-            <p className="text-black mb-3">
-              Receive chapters and insights in your inbox
+            <p className="eyebrow mb-3">Substack</p>
+            <h2 className="font-title text-2xl font-semibold text-left">
+              New chapters by email
+            </h2>
+            <p className="mt-2 text-left font-serif text-ink-soft">
+              The book as it&apos;s written, delivered when each chapter is
+              finished.
             </p>
-            <p className="text-royal-blue font-medium group-hover:underline">
-              Subscribe on Substack →
-            </p>
+            <span className="mt-4 inline-block font-sans text-sm uppercase tracking-[0.14em] text-gold">
+              Subscribe →
+            </span>
           </a>
 
-          {/* Medium */}
           <a
-            href="https://medium.com/@bookofsebastian"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white border-2 border-silver rounded-lg p-8 hover:border-royal-blue transition-all group"
+            href="mailto:sebastian@bookofsebastian.com"
+            className="oracle-card hover-lift p-8 text-left"
           >
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-royal-blue transition-colors">
-                  <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-title text-2xl font-semibold text-black">Medium</h3>
-                  <p className="text-dark-gray">Essays & Reflections</p>
-                </div>
-              </div>
-              <span className="text-royal-blue text-2xl opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
-                →
-              </span>
-            </div>
-            <p className="text-black">
-              Read essays and reflections on Medium
+            <p className="eyebrow mb-3">Email</p>
+            <h2 className="font-title text-2xl font-semibold text-left">
+              Get in touch
+            </h2>
+            <p className="mt-2 text-left font-serif text-ink-soft">
+              Questions, your own story, speaking and media — write directly.
             </p>
-          </a>
-
-          {/* LinkedIn */}
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow group"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                <svg className="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 className="font-serif text-2xl font-bold text-gray-900">LinkedIn</h3>
-                <p className="text-gray-600">Professional Network</p>
-              </div>
-            </div>
-            <p className="text-gray-700">
-              Connect professionally and follow business updates.
-            </p>
-          </a>
-
-          {/* Instagram */}
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow group"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                <svg className="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 className="font-serif text-2xl font-bold text-gray-900">Instagram</h3>
-                <p className="text-gray-600">Visual Updates</p>
-              </div>
-            </div>
-            <p className="text-gray-700">
-              Behind-the-scenes moments and visual storytelling.
-            </p>
-          </a>
-
-          {/* Foundation */}
-          <a
-            href="https://thefoundation.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow group"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                <svg className="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 className="font-serif text-2xl font-bold text-gray-900">The Foundation</h3>
-                <p className="text-gray-600">Community</p>
-              </div>
-            </div>
-            <p className="text-gray-700">
-              Rusty's Mindset Upgrade System—the framework guiding this journey.
-            </p>
+            <span className="mt-4 inline-block font-sans text-sm uppercase tracking-[0.14em] text-gold">
+              sebastian@bookofsebastian.com
+            </span>
           </a>
         </div>
       </section>
 
-      {/* Email Contact */}
-      <section className="bg-white py-20">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Get in Touch
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-cream rounded-lg p-8">
-              <h3 className="font-serif text-2xl font-bold text-gray-900 mb-4">General Inquiries</h3>
-              <p className="text-gray-700 mb-4">
-                Questions about the journey, the verses, or want to share your own story?
-              </p>
-              <a
-                href="mailto:sebastian@bookofsebastian.com"
-                className="text-gold hover:underline font-semibold text-lg"
-              >
-                sebastian@bookofsebastian.com
-              </a>
-            </div>
-
-            <div className="bg-cream rounded-lg p-8">
-              <h3 className="font-serif text-2xl font-bold text-gray-900 mb-4">Speaking & Media</h3>
-              <p className="text-gray-700 mb-4">
-                Interested in having Sebastian speak at your event or appear on your podcast?
-              </p>
-              <a
-                href="mailto:sebastian@bookofsebastian.com?subject=Speaking%20Inquiry"
-                className="text-gold hover:underline font-semibold text-lg"
-              >
-                sebastian@bookofsebastian.com
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Simple Contact Form Placeholder */}
-      <section className="max-w-3xl mx-auto px-6 py-12">
-        <div className="bg-gray-900 text-white rounded-lg p-8 md:p-12">
-          <h2 className="font-serif text-3xl font-bold mb-6 text-center">Send a Message</h2>
-          <p className="text-gray-300 text-center mb-8">
-            For now, please reach out directly via email. A contact form will be added soon.
-          </p>
-          <div className="text-center">
-            <a
-              href="mailto:sebastian@bookofsebastian.com"
-              className="inline-block px-8 py-4 bg-gold text-gray-900 rounded-md font-semibold hover:bg-yellow-600 transition-colors"
-            >
-              Email Sebastian
-            </a>
-          </div>
-        </div>
+      <section className="sec text-center">
+        <CTAButton href="/chapters" variant="primary">
+          Start Reading
+        </CTAButton>
       </section>
     </div>
   );

@@ -1,15 +1,13 @@
-/* Reading view — overrides the site's global center-forcing for long-form prose.
-   Typographic values tuned from research: ~66ch measure, 19px serif body,
-   1.6 line-height (1.45 mobile), paper-warm ground, motion gated. */
+/* Reading view — dark Oracle ground, ~66ch measure, serif prose, gold accents.
+   Overrides the global center-forcing for long-form reading. Motion gated. */
 
-/* Paper-warm reading ground behind the column. */
 .page {
-  background: #faf8f3;
+  width: 100%;
 }
 
 .wrap {
   width: 100%;
-  max-width: 38rem; /* ~66 characters at this size — the readability sweet spot */
+  max-width: 38rem; /* ~66 characters — the readability sweet spot */
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -18,9 +16,9 @@
   text-align: center;
   font-family: var(--font-title);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.8rem;
-  color: var(--color-silver);
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  color: var(--color-gold);
   margin-bottom: 1rem;
 }
 
@@ -29,35 +27,34 @@
   font-family: var(--font-title);
   font-weight: 700;
   font-size: 3rem;
-  line-height: 1.1;
-  color: var(--color-black);
+  line-height: 1.08;
+  color: var(--color-ink);
   margin-bottom: 0.5rem;
 }
 
 .meta {
   text-align: center;
-  font-style: italic;
-  color: var(--color-royal-blue);
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
-  margin-bottom: 2.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-faint);
+  margin-bottom: 3rem;
 }
 
 .meta .dot {
-  color: var(--color-silver);
+  color: var(--color-gold-dim);
   margin: 0 0.5rem;
-  font-style: normal;
 }
 
-/* The prose column — left aligned, real reading measure. Beats the global p{center}. */
+/* The prose column — left aligned, real reading measure, warm off-white serif on dark. */
 .prose p {
   text-align: left;
   max-width: 100%;
-  margin: 0 0 1.4rem 0;
+  margin: 0 0 1.45rem 0;
   font-family: var(--font-serif);
-  font-size: 1.19rem; /* ~19px — EB Garamond runs small, so up from 16 */
-  line-height: 1.6;
-  color: #1a1a1a;
+  font-size: 1.25rem; /* ~20px — EB Garamond runs small */
+  line-height: 1.7;
+  color: #e7e5df;
 }
 
 .prose p:first-of-type::first-letter {
@@ -66,17 +63,16 @@
   font-weight: 600;
   line-height: 0.82;
   float: left;
-  margin: 0.06em 0.12em 0 0;
-  color: var(--color-royal-blue);
+  margin: 0.06em 0.14em 0 0;
+  color: var(--color-gold);
 }
 
-/* Asterism — one tasteful section/close mark per chapter. */
 .asterism {
   text-align: center;
-  color: var(--color-silver);
+  color: var(--color-gold-dim);
   font-size: 1.3rem;
   letter-spacing: 0.4em;
-  margin: 2.5rem 0;
+  margin: 2.75rem 0;
 }
 
 .nav {
@@ -89,39 +85,38 @@
 .navLink {
   font-family: var(--font-serif);
   font-size: 0.95rem;
-  color: var(--color-dark-gray);
+  color: var(--color-ink-soft);
   text-decoration: none;
   max-width: 45%;
+  transition: color 0.2s ease;
 }
-
 .navLink:hover {
-  color: var(--color-royal-blue);
+  color: var(--color-gold);
 }
 
 .navLink .dir {
   display: block;
+  font-family: var(--font-sans);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.7rem;
-  color: var(--color-silver);
-  margin-bottom: 0.25rem;
+  letter-spacing: 0.14em;
+  font-size: 0.68rem;
+  color: var(--color-gold-dim);
+  margin-bottom: 0.3rem;
 }
 
 .navRight {
   text-align: right;
 }
 
-/* Gentle entrance — gated behind reduced-motion. */
 @media (prefers-reduced-motion: no-preference) {
   .fadeIn {
-    animation: chapterFade 0.7s ease-out both;
+    animation: chapterFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 }
-
 @keyframes chapterFade {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -129,9 +124,9 @@
   }
 }
 
-/* Index list */
+/* ---------- Chapter index ---------- */
 .partGroup {
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   width: 100%;
 }
 
@@ -139,9 +134,9 @@
   text-align: center;
   font-family: var(--font-title);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.22em;
   font-size: 0.85rem;
-  color: var(--color-silver);
+  color: var(--color-gold);
   margin-bottom: 1.5rem;
 }
 
@@ -149,18 +144,21 @@
   display: block;
   text-align: center;
   text-decoration: none;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid var(--color-silver);
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--color-line);
+  transition: background 0.2s ease;
 }
-
+.chapterRow:hover {
+  background: rgba(200, 164, 92, 0.04);
+}
 .chapterRow:hover .chapterTitle {
-  color: var(--color-royal-blue);
+  color: var(--color-gold);
 }
 
 .chapterNum {
   font-family: var(--font-serif);
   font-style: italic;
-  color: var(--color-royal-blue);
+  color: var(--color-gold);
   font-size: 0.9rem;
   margin-bottom: 0.2rem;
 }
@@ -169,20 +167,22 @@
   font-family: var(--font-title);
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--color-black);
+  color: var(--color-ink);
+  transition: color 0.2s ease;
 }
 
 .chapterWords {
-  font-size: 0.8rem;
-  color: var(--color-dark-gray);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-ink-faint);
   letter-spacing: 0.05em;
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
 }
 
 .comingSoon {
   text-align: center;
   font-style: italic;
-  color: var(--color-dark-gray);
+  color: var(--color-ink-faint);
   margin-top: 2rem;
   font-size: 1rem;
 }
@@ -192,7 +192,7 @@
     font-size: 2.2rem;
   }
   .prose p {
-    font-size: 1.12rem;
-    line-height: 1.45;
+    font-size: 1.15rem;
+    line-height: 1.5;
   }
 }

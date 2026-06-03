@@ -1,88 +1,60 @@
 import Link from "next/link";
 
+const NAV = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/chapters", label: "The Book" },
+  { href: "/start", label: "Start" },
+  { href: "/subscribe", label: "Subscribe" },
+  { href: "/connect", label: "Connect" },
+];
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t-2 border-gold/30 bg-parchment">
-      <div className="max-w-3xl mx-auto px-6 py-16">
-        <div className="text-center mb-10">
-          <h3 className="font-title text-2xl font-semibold text-charcoal mb-4 tracking-wide">
-            The Book of Sebastian
+    <footer className="w-full border-t border-line">
+      <div className="mx-auto max-w-3xl px-6 py-16">
+        <div className="mb-8 text-center">
+          <h3 className="font-title text-2xl font-semibold tracking-wide text-ink mb-3">
+            The Book of <span className="gold-text">Sebastian</span>
           </h3>
-          <p className="font-serif text-charcoal/70 leading-relaxed italic max-w-lg mx-auto">
+          <p className="font-serif italic text-ink-soft max-w-lg mx-auto">
             The doorway between the life that ended and the life that came
             after.
           </p>
         </div>
 
-        <div className="ornamental-divider text-gold mb-10">— ◆ —</div>
+        <div className="hairline mb-8" />
 
-        <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm uppercase tracking-biblical">
-          <Link
-            href="/"
-            className="font-serif text-charcoal hover:text-burgundy transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="font-serif text-charcoal hover:text-burgundy transition-colors"
-          >
-            About
-          </Link>
-          <Link
-            href="/start"
-            className="font-serif text-charcoal hover:text-burgundy transition-colors"
-          >
-            Start Here
-          </Link>
-          <Link
-            href="/subscribe"
-            className="font-serif text-charcoal hover:text-burgundy transition-colors"
-          >
-            Subscribe
-          </Link>
-          <Link
-            href="/connect"
-            className="font-serif text-charcoal hover:text-burgundy transition-colors"
-          >
-            Connect
-          </Link>
+        <div className="mb-8 flex flex-wrap justify-center gap-x-6 gap-y-2 font-sans text-xs uppercase tracking-[0.14em]">
+          {NAV.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="text-ink-soft hover:text-gold transition-colors"
+            >
+              {l.label}
+            </Link>
+          ))}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm">
+        <div className="mb-10 flex flex-wrap justify-center gap-6 text-sm">
           <a
             href="https://sebastiangerhardt.substack.com?utm_source=website&utm_medium=footer&utm_campaign=landing"
-            className="font-serif text-charcoal/70 hover:text-gold transition-colors"
+            className="font-sans text-ink-faint hover:text-gold transition-colors"
           >
             Substack
           </a>
           <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-serif text-charcoal/70 hover:text-gold transition-colors"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-serif text-charcoal/70 hover:text-gold transition-colors"
-          >
-            Instagram
-          </a>
-          <a
             href="mailto:sebastian@bookofsebastian.com"
-            className="font-serif text-charcoal/70 hover:text-gold transition-colors"
+            className="font-sans text-ink-faint hover:text-gold transition-colors"
           >
             Email
           </a>
         </div>
 
-        <div className="border-t border-gold/30 pt-8 text-center text-sm font-serif text-charcoal/60">
+        <div className="border-t border-line pt-8 text-center font-sans text-xs text-ink-faint">
           <p>
             &copy; {currentYear} The Book of Sebastian. All rights reserved.
           </p>

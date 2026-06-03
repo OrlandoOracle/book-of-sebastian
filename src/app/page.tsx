@@ -1,6 +1,5 @@
+import Link from "next/link";
 import CTAButton from "@/components/CTAButton";
-import OrnamentalDivider from "@/components/OrnamentalDivider";
-import SectionHeader from "@/components/SectionHeader";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,151 +21,105 @@ export const metadata: Metadata = {
     description:
       "The doorway between the life that ended and the life that came after.",
   },
-  alternates: {
-    canonical: "https://bookofsebastian.com",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  alternates: { canonical: "https://bookofsebastian.com" },
+  robots: { index: true, follow: true },
 };
 
 export default function Home() {
   return (
-    <div className="bg-parchment">
-      {/* Hero Section */}
-      <section className="max-w-3xl mx-auto px-6 py-12 md:py-16 mb-16">
-        <div className="text-center">
-          <h1 className="font-title text-6xl md:text-8xl font-bold text-black mb-6 leading-[1.1] tracking-tight uppercase">
-            The Book
+    <div className="w-full">
+      {/* Hero */}
+      <section className="px-6 pt-24 pb-20 md:pt-32 md:pb-28 lg:pt-40 lg:pb-32">
+        <div className="reveal mx-auto max-w-3xl text-center">
+          <p className="eyebrow mb-9">A Testament in Two Worlds</p>
+          <h1 className="font-title text-6xl md:text-8xl font-bold leading-[1.04] tracking-tight">
+            The Book of
             <br />
-            of
-            <br />
-            Sebastian
+            <span className="gold-text">Sebastian</span>
           </h1>
-          <p className="font-serif text-xl md:text-2xl text-dark-gray mb-8 leading-relaxed italic max-w-2xl mx-auto">
-            A magician. A brain cancer survivor.
-            <br />
-            The doorway between the life that ended
-            <br />
-            and the life that came after.
+          <p className="mx-auto mt-9 max-w-xl font-serif text-xl md:text-2xl italic leading-relaxed text-ink-soft">
+            A magician. A brain cancer survivor. The doorway between the life
+            that ended and the life that came after.
           </p>
-
-          <OrnamentalDivider />
-
-          <div className="flex flex-col gap-4 items-center mt-8">
+          <div className="mt-14 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <CTAButton href="/chapters" variant="primary">
               Start Reading
             </CTAButton>
             <CTAButton
               href="https://sebastiangerhardt.substack.com/subscribe"
               variant="secondary"
-              external={true}
+              external
               utmCampaign="hero_subscribe"
             >
-              Get New Chapters by Email
+              Get New Chapters
             </CTAButton>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="border-t border-b border-silver bg-white py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader>Two Worlds</SectionHeader>
+      {/* Bento */}
+      <section className="px-5 py-16 md:px-8 md:py-24">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 md:auto-rows-[248px]">
+          {/* Dominant: read the book */}
+          <Link
+            href="/chapters"
+            className="oracle-card hover-lift group flex flex-col justify-center gap-7 p-12 text-left md:col-span-2 md:row-span-2"
+          >
+            <div>
+              <p className="eyebrow mb-5">The Book</p>
+              <h2 className="font-title text-3xl md:text-4xl font-semibold text-left">
+                Read it, a chapter at a time.
+              </h2>
+              <p className="mt-4 max-w-md text-left font-serif text-lg leading-relaxed text-ink-soft">
+                Eighteen short chapters across three movements — the seen world,
+                the world that ended, and the world made after.
+              </p>
+            </div>
+            <span className="font-sans text-sm uppercase tracking-[0.14em] text-gold">
+              Open the chapters →
+            </span>
+          </Link>
 
-          <div className="text-center space-y-8 w-full max-w-2xl mx-auto mt-8">
-            <p className="drop-cap font-serif text-lg md:text-xl text-black leading-relaxed text-center mx-auto">
-              I see the world twice. That is not a way of speaking. It is my
-              eyes. Most of the time my brain lays the two pictures over each
-              other and I see one world. When I am tired, or when something
-              matters, they pull apart.
+          {/* About */}
+          <Link
+            href="/about"
+            className="oracle-card oracle-card--raised hover-lift flex flex-col justify-center gap-3 p-8 text-left"
+          >
+            <p className="eyebrow mb-3">About</p>
+            <p className="text-left font-serif text-lg text-ink">
+              A magician who saw the world twice — and then for real.
             </p>
-            <p className="font-serif text-lg md:text-xl text-black leading-relaxed text-center mx-auto">
-              I grew up doing magic. The first world. In 2018, at twenty-two,
-              the second one arrived — Grade 4 pineoblastoma, and no insurance
-              to meet it. I survived. The version of me that thought time was a
-              thing I owned did not.
-            </p>
-            <p className="font-serif text-lg md:text-xl text-black leading-relaxed text-center mx-auto">
-              This is the book about what came after. The survival, the rebuild,
-              the doorway. I write it down a chapter at a time. I am not in a
-              hurry.
-            </p>
-          </div>
+          </Link>
 
-          <OrnamentalDivider />
+          {/* Subscribe */}
+          <a
+            href="https://sebastiangerhardt.substack.com/subscribe?utm_source=website&utm_medium=bento&utm_campaign=home"
+            className="oracle-card oracle-card--raised hover-lift flex flex-col justify-center gap-3 p-8 text-left"
+          >
+            <p className="eyebrow mb-3">Follow</p>
+            <p className="text-left font-serif text-lg text-ink">
+              New chapters by email, as the work is finished.
+            </p>
+          </a>
+        </div>
+      </section>
 
-          <div className="text-center mt-8">
-            <CTAButton href="/about" variant="secondary">
-              About the Author
+      {/* A line from the book */}
+      <section className="px-6 py-28 md:py-32">
+        <div className="glass-panel reveal mx-auto max-w-2xl p-12 md:p-16 text-center">
+          <p className="eyebrow mb-6">From the Book</p>
+          <blockquote className="font-serif text-2xl md:text-3xl italic leading-relaxed text-ink">
+            “People sometimes ask if magic is about deception. It isn&apos;t.
+            The trick is the doorway. The wonder is what walks through.”
+          </blockquote>
+          <cite className="verse-ref mt-6 block not-italic">
+            — The Trick Is the Doorway
+          </cite>
+          <div className="mt-8">
+            <CTAButton href="/chapters" variant="primary">
+              Read the Chapters
             </CTAButton>
           </div>
-        </div>
-      </section>
-
-      {/* A Line From the Book */}
-      <section className="max-w-3xl mx-auto px-6 py-20 bg-off-white">
-        <SectionHeader>From the Book</SectionHeader>
-
-        <div className="border-l-4 border-royal-blue pl-8 py-8 my-8">
-          <div className="text-left">
-            <blockquote className="font-serif text-xl md:text-2xl text-black leading-relaxed italic mb-6">
-              "People sometimes ask if magic is about deception. It isn't. The
-              trick is the doorway. The wonder is what walks through."
-            </blockquote>
-            <cite className="verse-ref block not-italic text-royal-blue font-medium">
-              — The Trick Is the Doorway
-            </cite>
-          </div>
-        </div>
-
-        <div className="text-center mt-8">
-          <CTAButton href="/chapters" variant="primary">
-            Read the Chapters
-          </CTAButton>
-        </div>
-      </section>
-
-      {/* Join Section */}
-      <section className="border-t border-silver bg-black text-white py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-title text-sm uppercase tracking-wide text-silver mb-8 font-medium">
-            — • Follow the Book • —
-          </h2>
-          <p className="font-serif text-xl md:text-2xl mb-10 leading-relaxed">
-            New chapters arrive as the work is finished.
-            <br />
-            No schedule. No filler. The book, as it gets written.
-          </p>
-
-          <div className="ornamental-divider mb-12 text-silver opacity-60">
-            ◆
-          </div>
-
-          <CTAButton href="/subscribe" variant="primary">
-            Get New Chapters by Email
-          </CTAButton>
-        </div>
-      </section>
-
-      {/* Call to Start */}
-      <section className="max-w-3xl mx-auto px-6 py-20">
-        <div className="border-2 border-silver bg-white rounded-lg p-12 text-center">
-          <h2 className="font-title text-3xl md:text-4xl font-semibold text-black mb-6 tracking-wide">
-            New to The Book of Sebastian?
-          </h2>
-          <p className="font-serif text-xl text-black mb-10 leading-relaxed">
-            Start at the first chapter and read through the doorway.
-          </p>
-
-          <div className="ornamental-divider mb-10 text-silver opacity-60">
-            ◆
-          </div>
-
-          <CTAButton href="/start" variant="primary">
-            Start Here
-          </CTAButton>
         </div>
       </section>
     </div>
