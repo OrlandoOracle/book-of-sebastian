@@ -25,9 +25,9 @@ jobs:
         run: npm run build
 
       - name: Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          # wrangler-action runs `wrangler deploy` by default, using wrangler.jsonc
-          # (serves ./out as assets, binds the bookofsebastian.com routes).
+        # Use the wrangler pinned in devDependencies (installed by npm ci) — same
+        # version verified locally. Avoids wrangler-action's non-interactive npx install.
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
