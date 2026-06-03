@@ -43,66 +43,75 @@ const GALLERY = [
   },
 ];
 
+const GALLERY2 = [
+  {
+    src: "/photos/live-fringe.jpg",
+    alt: "Sebastian performing his show The Other Side on stage in a leather jacket",
+    caption: "The Other Side — on stage",
+    pos: "center",
+  },
+  {
+    src: "/photos/closeup-mall.jpg",
+    alt: "Sebastian in a fedora performing close-up magic for a child and onlookers",
+    caption: "Close-up, in the wild",
+    pos: "left center",
+  },
+];
+
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Cinematic hero */}
-      <section
-        style={{
-          position: "relative",
-          width: "100%",
-          minHeight: "88vh",
-          display: "flex",
-          alignItems: "flex-end",
-          justifyContent: "center",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src="/photos/hero-library.jpg"
-          alt="Sebastian in a dark library, holding his own head, a book titled Art and Magic where his face should be"
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-        />
+      {/* Hero — image on top (head + book visible), title beneath (text off the subject) */}
+      <section className="w-full">
+        <div style={{ position: "relative", width: "100%" }}>
+          <img
+            src="/photos/hero-library.jpg"
+            alt="Sebastian in a dark library, holding his own head, a book titled Art and Magic where his face should be"
+            style={{
+              width: "100%",
+              height: "clamp(420px, 70vh, 820px)",
+              objectFit: "cover",
+              objectPosition: "center top",
+              display: "block",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              insetInline: 0,
+              bottom: 0,
+              height: "42%",
+              background: "linear-gradient(180deg, transparent, #0a0a0f)",
+              pointerEvents: "none",
+            }}
+          />
+        </div>
         <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(10,10,15,0.45) 0%, rgba(10,10,15,0.25) 32%, rgba(10,10,15,0.78) 78%, #0a0a0f 100%)",
-          }}
-        />
-        <div className="reveal" style={{ position: "relative", zIndex: 1 }}>
-          <div className="mx-auto max-w-3xl px-6 pb-16 text-center md:pb-24">
-            <p className="eyebrow mb-7">A Testament in Two Worlds</p>
-            <h1 className="font-title text-6xl md:text-8xl font-bold leading-[1.04] tracking-tight">
-              The Book of
-              <br />
-              <span className="gold-text">Sebastian</span>
-            </h1>
-            <p className="mx-auto mt-7 max-w-xl font-serif text-xl md:text-2xl italic leading-relaxed text-ink">
-              A magician. A brain cancer survivor. The doorway between the life
-              that ended and the life that came after.
-            </p>
-            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <CTAButton href="/chapters" variant="primary">
-                Start Reading
-              </CTAButton>
-              <CTAButton
-                href="https://sebastiangerhardt.substack.com/subscribe"
-                variant="secondary"
-                external
-                utmCampaign="hero_subscribe"
-              >
-                Get New Chapters
-              </CTAButton>
-            </div>
+          className="reveal mx-auto max-w-3xl px-6 pb-16 text-center md:pb-24"
+          style={{ marginTop: "-3rem", position: "relative", zIndex: 1 }}
+        >
+          <p className="eyebrow mb-7">A Testament in Two Worlds</p>
+          <h1 className="font-title text-6xl md:text-8xl font-bold leading-[1.04] tracking-tight">
+            The Book of
+            <br />
+            <span className="gold-text">Sebastian</span>
+          </h1>
+          <p className="mx-auto mt-7 max-w-xl font-serif text-xl md:text-2xl italic leading-relaxed text-ink-soft">
+            A magician. A brain cancer survivor. The doorway between the life
+            that ended and the life that came after.
+          </p>
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <CTAButton href="/chapters" variant="primary">
+              Start Reading
+            </CTAButton>
+            <CTAButton
+              href="https://sebastiangerhardt.substack.com/subscribe"
+              variant="secondary"
+              external
+              utmCampaign="hero_subscribe"
+            >
+              Get New Chapters
+            </CTAButton>
           </div>
         </div>
       </section>
@@ -170,6 +179,37 @@ export default function Home() {
                     height: "320px",
                     objectFit: "cover",
                     objectPosition: "center top",
+                    display: "block",
+                  }}
+                />
+                <figcaption className="px-5 py-4 text-center font-sans text-xs uppercase tracking-[0.14em] text-ink-soft">
+                  {g.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Second photo band — live / out in the world */}
+      <section className="px-5 pb-12 md:px-8 md:pb-16">
+        <div className="mx-auto max-w-3xl">
+          <p className="eyebrow mb-8 text-center">Out in the World</p>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {GALLERY2.map((g) => (
+              <figure
+                key={g.src}
+                className="hover-lift oracle-card overflow-hidden p-0"
+              >
+                <img
+                  src={g.src}
+                  alt={g.alt}
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "300px",
+                    objectFit: "cover",
+                    objectPosition: g.pos,
                     display: "block",
                   }}
                 />
